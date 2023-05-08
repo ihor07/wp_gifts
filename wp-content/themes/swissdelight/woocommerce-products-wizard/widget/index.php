@@ -182,3 +182,21 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
     }
     ?>
 </section>
+<script>
+    jQuery(document).on('ajaxCompleted.wcpw', (e, instance, response, formData, options) => {
+        var ourCustomProgressBar = jQuery("#ourCustomProgressBar");
+        var widthLength = 0;
+        response.cart.forEach(function( index ) {
+            if(typeof index.q !== 'undefined') {
+                widthLength += index.q;
+            } else {
+                widthLength++;
+            }
+        });
+        widthLength = widthLength * 10;
+        var widthLengthPercentage = widthLength + "%";
+        ourCustomProgressBar.width(widthLengthPercentage);
+        ourCustomProgressBar.text(widthLengthPercentage);
+        ourCustomProgressBar.attr('aria-valuenow', widthLength);
+    });
+</script>
