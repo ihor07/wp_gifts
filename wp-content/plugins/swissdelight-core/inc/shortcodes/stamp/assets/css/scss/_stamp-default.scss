@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Stamp shortcode style - begin
+   ========================================================================== */
+
+.widget.qodef-stamp-widget {
+    margin-bottom: 0;
+}
+
+.qodef-stamp {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 195px;
+    height: 195px;
+    color: var(--qode-main-color);
+    font-family: $text-font;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    .qodef-browser--chrome & {
+        font-weight: 600;
+    }
+    
+    .qodef-m-centered-text {
+        font-family: $text-font;
+        font-size: 80px;
+        color: var(--qode-main-color);
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        display: inline-block;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .qodef-m-circle {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        border: 1px solid currentColor;
+        border-radius: 100%;
+        opacity: 0;
+        transform: scale(.6);
+        transition: .3s ease-out, transform .6s cubic-bezier(.24,0,.16,1.01);
+    }
+    
+    .qodef-m-text {
+        position: relative;
+        display: block;
+        height: 100%;
+        
+        > * {
+            position: absolute;
+            top: 0;
+            left: calc(50% - 4px);
+            width: 8px;
+            height: 50%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity .15s ease-out;
+            transform-origin: bottom center;
+            transform: rotate(-90deg);
+            font-family: $heading-font;
+            letter-spacing: .14em;
+            will-change: transform;
+        }
+    }
+
+    &.qodef--vertical-line {
+        .qodef-m-text:before {
+            content: '';
+            width: 1px;
+            height: 145px;
+            background-color: currentColor;
+            position: absolute;
+            left: 50%;
+            top: -35px;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform .6s cubic-bezier(.24,0,.16,1.01);
+        }
+    }
+    
+    &.qodef--appear {
+        .qodef-m-circle {
+            opacity: 0.8;
+            transform: scale(1);
+        }
+    }
+    
+    &.qodef--init {
+        .qodef-m-text {
+            
+            > * {
+                opacity: 1;
+            }
+
+            &:before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    
+    &.qodef--abs {
+        position: absolute;
+    }
+    
+    $stages: ('1440', '1366', '1280', '1024', '768', '680', '480');
+    @for $i from 0 to length($stages) {
+        &.qodef-hide-on--#{nth($stages,$i+1)} {
+            
+            @media only screen and (max-width: #{nth($stages,$i+1)}px) {
+                display: none;
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Stamp shortcode style - end
+   ========================================================================== */

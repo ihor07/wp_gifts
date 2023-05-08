@@ -1,0 +1,405 @@
+/* ==========================================================================
+   WooCommerce DropDown Cart static style start
+   ========================================================================== */
+
+.widget_swissdelight_core_woo_dropdown_cart {
+	height: 100%;
+}
+
+.qodef-woo-dropdown-cart {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	padding: 0 10px;
+
+	@include qodefScreenSize1440 {
+		padding: 0 5px;
+	}
+
+	.qodef-m {
+
+		&-inner {
+			@include qodefRelativeLayout();
+			height: 100%;
+		}
+
+		&-opener {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 100%;
+
+			&:hover{
+
+				.qodef-m-opener-count {
+					border-color: $heading-color;
+
+					.qodef-m-svg-icon {
+
+						circle {
+
+							&:first-child {
+								stroke-dashoffset: -110;
+							}
+
+							&:last-child {
+								stroke-dashoffset: 0;
+							}
+						}
+					}
+				}
+			}
+
+			&-label,
+			&-count {
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: 400;
+			}
+
+			&-label {
+				letter-spacing: .15em;
+			}
+
+			&-count {
+				position: relative;
+				border-radius: 100%;
+				width: 37px;
+				height: 37px;
+				line-height: 37px;
+				text-align: center;
+				margin-left: 5px;
+
+				.qodef-m-svg-icon {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 37px;
+					height: 37px;
+
+					circle {
+						fill: none;
+						stroke-dasharray: 110;
+						transition: stroke-dashoffset .6s cubic-bezier(.24,0,.16,1.01);
+
+						&:first-child {
+							stroke: rgba(36, 28, 16, .2);
+							stroke-dashoffset: 0;
+
+							.qodef-skin--light & {
+								stroke: rgba(255,255,255, .2);
+							}
+						}
+
+						&:last-child {
+							stroke: rgba(36, 28, 16, .4);
+							stroke-dashoffset: 110;
+
+							.qodef-skin--light & {
+								stroke: rgba(255,255,255, .4);
+							}
+						}
+					}
+				}
+
+				.qodef-skin--light & {
+					border-color: rgba(255,255,255, .6);
+				}
+
+				#qodef-top-area & {
+					border-color: $text-color;
+				}
+
+				@include qodefScreenSize1024 {
+					margin-left: 0;
+					border: none;
+					width: auto;
+					height: auto;
+					line-height: 1em;
+					font-size: 10px;
+					top: -3px;
+					position: relative;
+
+					.qodef-m-svg-icon {
+						display: none;
+					}
+				}
+			}
+
+			#qodef-top-area & {
+				color: $text-color;
+			}
+		}
+
+		&-dropdown {
+			position: absolute;
+			top: 100%;
+			left: auto;
+			right: 0;
+			text-align: left;
+			opacity: 0;
+			visibility: hidden;
+			transition: $opacity-transition, visibility $transition-timing;
+
+			.qodef-header-sticky & {
+				border-top: none;
+			}
+
+			&-inner {
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				width: 355px;
+				padding: 50px 36px ;
+				background-color: #fff;
+				box-shadow: -1px 3px 7px 0 #0000000a;
+
+				.qodef-m-posts-not-found {
+					color: $text-color;
+				}
+			}
+		}
+
+		&-order-details {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 23px;
+
+			> * {
+				margin: 0;
+			}
+
+			.qodef-m-order-label {
+				text-transform: capitalize;
+			}
+		}
+
+		&-order-amount {
+			color: $heading-color;
+		}
+
+		&-action {
+			@include qodefRelativeLayout();
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 18px;
+
+			&-link {
+				@include qodefButtonDefaultStyle();
+
+				&.qodef-m-view-cart {
+					padding: 6px 40px 4px;
+					margin-right: 8px;
+					@include qodefButtonOutlinedColor(!important);
+					@include qodefButtonBorderDefault();
+
+					&:hover {
+						@include qodefButtonOutlinedHoverColor(!important);
+						@include qodefButtonBorderHover();
+					}
+				}
+
+				&.qodef-m-checkout {
+					padding: 6px 30px 4px;
+					margin-left: 8px;
+					@include qodefButtonFilledColor(!important);
+
+					&:hover {
+						background-color: #000 !important;
+					}
+				}
+			}
+		}
+	}
+
+	.qodef-woo-dropdown {
+
+		&-items {
+			@include qodefRelativeLayout();
+		}
+
+		&-item {
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			margin-top: 31px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.qodef-e {
+
+		&-image {
+			flex-shrink: 0;
+
+			a, img {
+				display: block;
+			}
+			
+			img {
+				object-fit: cover;
+				height: 94px;
+			}
+		}
+
+		&-content {
+			@include qodefRelativeLayout();
+
+			padding-right: 20px;
+		}
+
+		&-title {
+			margin: 0;
+			text-transform: capitalize;
+
+			a {
+				.qodef-skin--light & {
+					color: $heading-color !important;
+
+					&:hover {
+						color: $text-color !important;
+					}
+				}
+			}
+		}
+
+		&-price {
+			margin: 8px 0 0;
+			color: $heading-color;
+		}
+
+		&-quantity {
+			margin: 3px 0 0;
+			color: $text-color;
+			font-size: 15px;
+			line-height: 1.66em;
+			letter-spacing: .01em;
+		}
+
+		&-remove {
+			position: absolute;
+			top: 0;
+			right: 0;
+			font-size: 21px;
+			line-height: 1;
+
+			.qodef-skin--light & {
+				color: $text-color !important;
+			}
+		}
+	}
+
+	.touchevents & {
+		cursor: pointer;
+	}
+
+	&:hover {
+
+		.qodef-m-dropdown {
+			opacity: 1;
+			visibility: visible;
+
+			@include qodefScreenSize680 {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+	
+	#qodef-top-area & {
+	
+		.qodef-m-opener-label {
+			font-size: 14px;
+			letter-spacing: 0;
+			text-transform: capitalize;
+		}
+		
+		.qodef-m-opener-count {
+			border: none;
+			width: auto;
+			height: auto;
+			line-height: 36px;
+
+			.qodef-m-svg-icon {
+				display: none;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   WooCommerce DropDown Cart variable style start
+   ========================================================================== */
+
+@import '../../../../../../../../../../themes/swissdelight/assets/css/scss/widgets-map';
+
+$local-widgets-area-map: (
+	'#qodef-page-sidebar': (
+		text-color: null,
+		link-color: null,
+		link-hover-color: null
+	),
+	'#qodef-top-area': (
+		text-color: $text-color,
+		link-color: $text-color,
+		link-hover-color: var(--qode-main-color),
+	)
+);
+
+$local-widgets-area-map-merged: non-destructive-map-merge($wp-widgets-area-map, $local-widgets-area-map);
+
+.qodef-woo-dropdown-cart {
+
+	@each $key, $values in $local-widgets-area-map-merged {
+		$wp-widgets-map-merged: map-merge($wp-widgets-map, $values);
+
+		.qodef-woo-dropdown-items {
+
+			#{$key} & {
+
+				@if (map-get($wp-widgets-map-merged, 'text-color') != null) {
+					color: map-get($wp-widgets-map-merged, 'text-color');
+				}
+
+				@if (map-get($wp-widgets-map-merged, 'link-color') != null) {
+					a {
+						color: $heading-color;
+
+						@if (map-get($wp-widgets-map-merged, 'link-hover-color') != null) {
+							&:hover {
+								color: map-get($wp-widgets-map-merged, 'link-hover-color');
+							}
+						}
+					}
+				}
+
+				.qodef-woo-dropdown-item {
+					margin-top: #{map-get($wp-widgets-map-merged, 'list-item-with-thumbnail-bottom-margin')}px;
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+
+				.qodef-e-image {
+					margin-right: #{map-get($wp-widgets-map-merged, 'thumbnail-right-margin')}px;
+					width: #{map-get($wp-widgets-map-merged, 'thumbnail-width')}px;
+				}
+
+				.qodef-m-order-details {
+
+					@if (map-get($wp-widgets-map-merged, 'text-color') != null) {
+						color: map-get($wp-widgets-map-merged, 'text-color');
+					}
+				}
+			}
+		}
+	}
+}

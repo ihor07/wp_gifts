@@ -1,0 +1,119 @@
+/* ==========================================================================
+   Product List Info Below styles
+   ========================================================================== */
+
+.qodef-woo-product-list {
+	
+	&.qodef-item-layout--info-below {
+		
+		&.qodef-line-separator {
+			
+			.qodef-woo-product-content {
+				padding-top: 42px;
+				
+				&:before {
+					content: '';
+					position: absolute;
+					top: -60px;
+					left: 50%;
+					width: 1px;
+					height: 77px;
+					background-color: #241c1066;
+					opacity: .3;
+				}
+			}
+			
+			&.qodef-item-skin--light {
+				
+				.qodef-woo-product-content {
+					
+					&:before {
+						background-color: rgba(255, 255, 255, .6);
+					}
+				}
+			}
+		}
+		
+		&.qodef-button-position--center {
+			
+			.qodef-woo-product-image-inner {
+				top: 50%;
+				bottom: unset;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		&.qodef-appear-animation--enabled {
+
+			.qodef-woo-product-content {
+
+				&:before {
+					transform: scaleY(0);
+					transform-origin: top;
+					transition: transform .6s cubic-bezier(.33,.02,0,.93);
+				}
+			}
+
+			&.qodef--appeared,
+			.elementor-editor-active & {
+
+				.qodef-woo-product-content {
+
+					&:before {
+						transform: scaleY(1);
+					}
+				}
+			}
+
+			.product {
+				@for $i from 1 through 12 {
+					&:nth-child(#{$i}) {
+
+						.qodef-woo-product-content {
+
+							&:before {
+								transition-delay: $i * .2s;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.qodef-grid-inner {
+		opacity: 1;
+		transition: $opacity-transition;
+	}
+	
+	.qodef-m-pagination-spinner {
+		position: absolute;
+		bottom: calc(50% - 16px);
+		left: calc(50% - 16px);
+		display: inline-block;
+		vertical-align: top;
+		width: 32px;
+		height: auto;
+		fill: var(--qode-main-color);
+		stroke: none;
+		visibility: hidden;
+		z-index: -1;
+		animation: qode-rotate 2s infinite linear;
+	}
+	
+	&.qodef--loading {
+		
+		.qodef-grid-inner {
+			opacity: 0;
+		}
+		
+		.qodef-m-pagination-inner {
+			opacity: 0;
+		}
+		
+		.qodef-m-pagination-spinner {
+			visibility: visible;
+			z-index: 1;
+		}
+	}
+}

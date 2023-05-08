@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+
+.swissdelight-core-page-inline-style {
+	position: absolute !important;
+	width: 0;
+	height: 0;
+	line-height: 1;
+	display: none;
+}
+
+.mfp-wrap {
+	z-index: 10001 !important;
+}
+
+.mfp-iframe-holder button.mfp-close {
+	top: -30px !important;
+	position: absolute;
+	right: -5px !important;
+}
+
+.qodef-page-has-custom-section--uncovering {
+
+	#qodef-custom-section--uncovering {
+		position: fixed !important;
+		width: 100%;
+		top: 0;
+		z-index: 0;
+	}
+
+	section:not(#qodef-custom-section--uncovering) {
+		z-index: 1;
+	}
+}
+
+.qodef-custom-appear--left,
+.qodef-custom-appear--right,
+.qodef-custom-appear--bottom {
+
+	img {
+		position: relative;
+		opacity: 0;
+		transition: opacity .6s ease-out, transform .8s ease;
+		z-index: 6;
+	}
+
+	&.qodef--appeared,
+	.elementor-editor-active & {
+
+		img {
+			opacity: 1;
+			transform: translate(0, 0);
+		}
+	}
+}
+
+.qodef-custom-appear--left {
+
+	img {
+		transform: translateX(-30px);
+	}
+}
+
+.qodef-custom-appear--right {
+
+	img {
+		transform: translateX(30px);
+	}
+}
+
+.qodef-custom-appear--bottom {
+
+	img {
+		transform: translateY(30px);
+	}
+}
+
+.qodef-offset-image-holder {
+
+	&.qodef-appear-animation--enabled {
+
+		@media only screen and (min-width: 1025px) {
+
+			&.qodef-appear-direction--left,
+			&.qodef-appear-direction--right,
+			&.qodef-appear-direction--bottom {
+
+				.qodef-offset-image-wrapper {
+					opacity: 0;
+					transition: opacity .6s ease-out, transform .8s ease;
+				}
+
+				&.qodef--appeared,
+				.elementor-editor-active & {
+
+					.qodef-offset-image-wrapper {
+						opacity: 1;
+						transform: translate(0, 0);
+					}
+				}
+			}
+
+			&.qodef-appear-direction--left {
+
+				.qodef-offset-image-wrapper {
+					transform: translateX(-30px);
+				}
+			}
+
+			&.qodef-appear-direction--right {
+
+				.qodef-offset-image-wrapper {
+					transform: translateX(30px);
+				}
+			}
+
+			&.qodef-appear-direction--bottom {
+
+				.qodef-offset-image-wrapper {
+					transform: translateY(30px);
+				}
+			}
+		}
+	}
+
+	@include qodefScreenSize1024 {
+		display: none;
+	}
+}

@@ -1,0 +1,125 @@
+/* ==========================================================================
+# Side Area style - begin
+========================================================================== */
+
+#qodef-side-area {
+	position: fixed;
+	top: 0;
+	right: -503px;
+	width: 503px;
+	height: 100%;
+	min-height: 100%;
+	padding: 160px 90px 30px;
+	text-align: center;
+	background-color: #fcf8ed;
+	overflow: hidden;
+	visibility: hidden;
+	z-index: 9999;
+	transition: $sliding-area-transition;
+
+	@include qodefScreenSize1440 {
+		padding-top: 70px;
+	}
+
+	@include qodefScreenSize1280 {
+		padding-top: 50px;
+	}
+	
+	.qodef-side-area--opened & {
+		right: 0;
+		visibility: visible;
+	}
+	
+	&.qodef-alignment--center {
+		text-align: center;
+	}
+	
+	&.qodef-alignment--right {
+		text-align: right;
+	}
+	
+	&.qodef-alignment--left {
+		text-align: left;
+	}
+}
+
+#qodef-side-area-close {
+	position: absolute;
+	top: 52px;
+	right: 75px;
+	display: block;
+	z-index: 1000;
+	
+	.admin-bar & {
+		top: 65px;
+	}
+	
+	&.qodef-source--predefined {
+		
+		.qodef-m-line {
+			
+			&.qodef--1 {
+				top: 13px;
+				transform: rotate(45deg);
+			}
+			
+			&.qodef--2 {
+				top: 13px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	&:hover {
+		color: $heading-color;
+
+		.qodef-side-area--svg-close {
+
+			line {
+				animation: qodef-draw-diag-line .66s forwards cubic-bezier(.33,.02,0,.93);
+
+				&:nth-child(2) {
+					animation: qodef-draw-diag-line .66s forwards cubic-bezier(.33,.02,0,.93) .14s;
+				}
+			}
+		}
+	}
+}
+
+.qodef-side-area-cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	overflow: hidden;
+	z-index: 0;
+	transition: opacity 0.2s ease-in-out, z-index 0.2s ease-in-out;
+	
+	.qodef-side-area--opened & {
+		opacity: 1;
+		z-index: 1002;
+	}
+}
+
+.qodef-side-area-opener {
+
+	&:hover {
+
+		.qodef-side-area--svg-open {
+
+			line {
+				animation: qodef-draw-line .66s forwards cubic-bezier(.33,.02,0,.93);
+
+				&:nth-child(2) {
+					animation: qodef-draw-line .66s forwards cubic-bezier(.33,.02,0,.93) .14s;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Side Area style - end
+========================================================================== */

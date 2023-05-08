@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Pricing Table shortcode styles
+   ========================================================================== */
+
+.qodef-pricing-table {
+	@include qodefRelativeLayout();
+	background-color: #fdfbf6;
+	
+	&.qodef-status--featured {
+		background-color: #fcf8ed;
+	}
+	
+	.qodef-m-inner {
+		padding: 76px 92px 91px;
+
+		@include qodefScreenSize1440 {
+			padding: 40px;
+		}
+	}
+	
+	.qodef-m-title {
+		
+		p {
+			margin: 0;
+			color: var(--qode-main-color);
+			letter-spacing: .15em;
+			font-size: 12px;
+		}
+	}
+	
+	.qodef-m-price {
+		margin-top: -5px;
+		
+		.qodef-m-price-wrapper {
+			display: flex;
+			margin: 0;
+			line-height: 1;
+			justify-content: flex-start;
+			letter-spacing: .02em;
+		}
+	}
+	
+	.qodef-m-content {
+		margin: 37px 0 0;
+		
+		>p {
+			margin-bottom: 15px;
+		}
+	}
+	
+	.qodef-m-button {
+		
+		.qodef-button {
+			margin: 25px 0 0;
+		}
+	}
+	
+	@include qodefScreenSize1440 {
+		
+		.qodef-m-content {
+			margin: 20px 0 0;
+		}
+		
+		.qodef-m-button {
+			
+			.qodef-button {
+				margin: 17px 0 7px;
+			}
+		}
+	}
+}

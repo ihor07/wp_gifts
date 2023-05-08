@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Nutritional Values List shortcode styles
+   ========================================================================== */
+
+.qodef-nutritional-values-list {
+	
+	.qodef-m-item {
+		position: relative;
+	}
+	
+	.qodef-m-item-info {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		.qodef-e-title {
+			text-transform: none;
+			margin: 14px 0 18px;
+		}
+		
+	}
+	
+	.qodef-e-line {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background-color: $border-color;
+	}
+}

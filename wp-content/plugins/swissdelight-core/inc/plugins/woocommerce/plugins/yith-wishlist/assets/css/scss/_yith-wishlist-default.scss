@@ -1,0 +1,169 @@
+.yith-wcwl-form {
+	
+	.wishlist-title {
+		display: none;
+	}
+	
+	.wishlist_table {
+		
+		thead {
+			
+			th {
+				font-family: Cormorant,serif;
+				font-size: 21px;
+				line-height: 1.14em;
+				font-weight: 600;
+				text-align: center;
+				color: $heading-color;
+			}
+		}
+		
+		tr {
+			
+			td {
+				text-align: center;
+				font-size: 15px;
+				
+				&.product-name {
+					font-family: Cormorant,serif;
+					font-size: 21px;
+					line-height: 1.14em;
+					font-weight: 600;
+					
+					a {
+						&:hover {
+							color: $box-background-color;
+						}
+					}
+				}
+				
+				&.product-add-to-cart {
+					
+					 a.button {
+						
+						 position: relative;
+						 vertical-align: middle;
+						 width: auto;
+						 margin: 0 auto !important;
+						 font-family: $text-font;
+						 font-size: 13px;
+						 line-height: 2em;
+						 font-weight: 400;
+						 letter-spacing: .15em;
+						 text-decoration: none;
+						 text-transform: uppercase;
+						 border-radius: 0;
+						 outline: none;
+						 transition: $color-transition;
+						
+						 &:after {
+							 content: 'a';
+							 font-family: 'linea-ecommerce-10';
+							 font-size: 16px;
+							 text-transform: none;
+							 line-height: 1em;
+							 vertical-align: middle;
+							 margin-left: 10px;
+							 position: relative;
+							 bottom: 1px;
+						 }
+						 
+						 &:hover {
+							 color: $heading-color;
+						 }
+					 }
+				}
+			}
+		}
+	}
+	
+	.yith-wcwl-share {
+		display: none;
+	}
+	
+	@include qodefScreenSize768 {
+		
+		.wishlist_table {
+			
+			thead {
+				
+				th {
+					&.product-thumbnail {
+						display: none;
+					}
+				}
+			}
+			
+			tr {
+				
+				td {
+					&.product-thumbnail {
+						display: none;
+					}
+				}
+			}
+		}
+		
+	}
+	
+	@include qodefScreenSize680 {
+		overflow-x: scroll;
+		
+		.product-thumbnail > a {
+			width: 50px;
+		}
+		
+		.wishlist_table {
+			
+			thead {
+				
+				th {
+					font-size: 16px;
+				}
+			}
+			
+			tr {
+				
+				td {
+					
+					&.product-name {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	
+	@include qodefScreenSize480 {
+		
+		.wishlist_table {
+			
+			thead {
+				
+				th {
+					&.product-stock-status {
+						width: 75px;
+						display: flex;
+						border-top: none;
+					}
+				}
+			}
+			
+			tr {
+				
+				td {
+					&.product-stock-status {
+						width: 75px;
+						display: flex;
+						height: 95px;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+#yith-wcwl-popup-message {
+	display: none !important;
+}

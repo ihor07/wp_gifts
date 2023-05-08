@@ -1,0 +1,92 @@
+/* ==========================================================================
+# Search covers header - start
+========================================================================== */
+
+@keyframes cover_search_fade_out {
+	0% {
+		opacity: 1;
+		visibility: visible;
+		z-index: 100;
+	}
+	100% {
+		opacity: 0;
+		visibility: hidden;
+		z-index: 0;
+	}
+}
+
+@keyframes cover_search_fade_in {
+	0% {
+		opacity: 0;
+		visibility: hidden;
+		z-index: 100;
+	}
+	100% {
+		opacity: 1;
+		visibility: visible;
+		z-index: 100;
+	}
+}
+
+.qodef-search-cover-form {
+	@include qodefAbsoluteLayout();
+	visibility: hidden;
+	opacity: 0;
+	background-color: #fff;
+	z-index: -1;
+	transition: opacity 0.3s ease;
+	
+	.qodef-m-inner {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		padding: $full-width-side-padding-large;
+	}
+	
+	.qodef-m-form-field {
+		padding: 0;
+		margin-bottom: 0;
+		font-size: 26px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: var(--qode-main-color);
+		background-color: transparent;
+		border: 0;
+		border-radius: 0;
+		outline-offset: 0;
+		
+		&:focus {
+			color: var(--qode-main-color);
+		}
+		
+		@include qodefPlaceholder {
+			color: inherit;
+		}
+	}
+	
+	.qodef-m-close {
+		flex-shrink: 0;
+		
+		&.qodef-source--icon-pack {
+			font-size: 23px;
+		}
+	}
+	
+	.qodef-covers-search--fadeout & {
+		animation: cover_search_fade_out .3s ease both;
+	}
+	
+	.qodef-covers-search--fadein & {
+		animation: cover_search_fade_in .3s ease both;
+	}
+	
+	.qodef-header--sticky-display #qodef-page-header > & {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+# Search covers header - end
+========================================================================== */

@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Login opener global styles
+   ========================================================================== */
+
+#qodef-page-header .widget.widget_swissdelight_membership_login_opener {
+	height: 100%;
+
+	.page-template-user-dashboard:not(.logged-in) & {
+		display: none;
+	}
+}
+
+.qodef-login-opener-widget {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	margin: 0 10px;
+	
+	.qodef-login-opener {
+		position: relative;
+		display: block;
+		font-size: 13px;
+		font-weight: 400;
+		text-transform: uppercase;
+		
+		.qodef-login-opener-text {
+			font-size: 13px;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: .15em;
+		}
+
+		#qodef-top-area & {
+			color: $heading-color;
+			display: flex;
+			align-items: center;
+
+			.qodef-login-opener-text {
+				font-size: 14px;
+				text-transform: none;
+				letter-spacing: 0;
+				color: $text-color;
+			}
+			
+			&:after {
+				border: none;
+				width: auto;
+				color: $heading-color;
+			}
+
+			&:hover {
+				.qodef-login-opener-text,
+				&:after {
+					color: #000;
+				}
+			}
+		}
+
+		&:after {
+			content: "";
+			font-family: "ionicons";
+			border-radius: 100%;
+			width: 37px;
+			height: 37px;
+			line-height: 37px;
+			text-align: center;
+			margin-left: 5px;
+			display: inline-block;
+			font-size: 14px;
+
+			#qodef-page-header-inner.qodef-skin--light & {
+				border-color: rgba(255,255,255, .3);
+			}
+		}
+
+		.qodef-m-svg-icon {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 37px;
+			height: 37px;
+
+			circle {
+				fill: none;
+				stroke-dasharray: 110;
+				transition: stroke-dashoffset .6s cubic-bezier(.24,0,.16,1.01);
+
+				&:first-child {
+					stroke: rgba(36, 28, 16, .3);
+					stroke-dashoffset: 0;
+
+					#qodef-page-header-inner.qodef-skin--light & {
+						stroke: rgba(255,255,255, .3);
+					}
+				}
+
+				&:last-child {
+					stroke: rgba(36, 28, 16, .5);
+					stroke-dashoffset: 110;
+
+					#qodef-page-header-inner.qodef-skin--light & {
+						stroke: rgba(255,255,255, .5);
+					}
+				}
+			}
+
+			#qodef-top-area & {
+				display: none;
+			}
+		}
+
+		&:hover {
+
+			.qodef-m-svg-icon {
+
+				circle {
+
+					&:first-child {
+						stroke-dashoffset: -110;
+					}
+
+					&:last-child {
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+		}
+	}
+	
+	.qodef-logged-in-user {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		height: 100%;
+		cursor: pointer;
+		
+		#qodef-top-area & {
+			color: $text-color;
+			line-height: 2em;
+			
+			.qodef-m-user-name {
+				font-size: 14px;
+				text-transform: none;
+				letter-spacing: 0;
+				color: $text-color;
+			}
+			
+			li {
+				margin: 0;
+			}
+			
+			a {
+				color: $text-color;
+			}
+			
+			.qodef-e-link {
+				color: $text-color;
+			}
+		}
+		
+		.qodef-m-user {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: 100%;
+			color: $heading-color;
+
+			#qodef-page-header-inner.qodef-skin--light & {
+				color: #fff;
+			}
+		}
+		
+		.qodef-m-user-image {
+			flex-shrink: 0;
+			margin-right: 5px;
+		}
+
+		.qodef-m-user-name {
+			font-size: 13px;
+			font-weight: 400;
+			text-transform: uppercase;
+			letter-spacing: .15em;
+		}
+		
+		.qodef-m-navigation-items {
+			position: absolute;
+			top: 100%;
+			left: -20px;
+			width: 200px;
+			padding: 20px 20px 30px;
+			background-color: #fff;
+			visibility: hidden;
+			opacity: 0;
+			box-shadow: -1px 3px 7px 0 #0000000a;
+			transition: $opacity-transition;
+
+			#qodef-top-area & {
+				top: calc(100% + 7px);
+
+				&:before {
+					content: '';
+					position: absolute;
+					height: 7px;
+					width: 100%;
+					background-color: transparent;
+					left: 0;
+					top: -7px;
+				}
+			}
+
+			#qodef-page-header-inner.qodef-skin--light & {
+				background-color: #121213;
+			}
+		}
+		
+		.qodef-m-navigation-item {
+			margin: 10px 0;
+			
+			.qodef-e-link {
+				position: relative;
+				display: flex;
+				align-items: flex-start;
+				color: $text-color;
+
+				&:hover {
+					color: #000 !important;
+
+					#qodef-page-header-inner.qodef-skin--light & {
+						color: #fff !important;
+					}
+				}
+			}
+			
+			.qodef-e-icon {
+				flex-shrink: 0;
+				margin-right: 5px;
+			}
+		}
+		
+		&:hover {
+			.qodef-m-navigation-items {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}

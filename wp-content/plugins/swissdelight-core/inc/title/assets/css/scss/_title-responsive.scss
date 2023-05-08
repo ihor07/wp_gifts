@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Title responsive styles
+   ========================================================================== */
+
+@include qodefScreenSize1024 {
+    
+    .qodef-page-title {
+    
+        .qodef-m-content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        
+            body:not(.qodef-content-behind-header) & {
+                padding-top: 0 !important; //overrides padding that header puts on content
+            }
+    
+            &.qodef-content-full-width {
+                padding: 0 calc(24% / 2);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .qodef-page-title {
+        
+        .qodef-m-content {
+            
+            &.qodef-content-full-width {
+                padding: 0 calc(14% / 2);
+            }
+        }
+    }
+}
+
+@include qodefScreenSize480 {
+    
+    .qodef-page-title {
+        
+        .qodef-m-content {
+            
+            &.qodef-content-full-width {
+                padding: 0 calc(18% / 2);
+            }
+        }
+    }
+}

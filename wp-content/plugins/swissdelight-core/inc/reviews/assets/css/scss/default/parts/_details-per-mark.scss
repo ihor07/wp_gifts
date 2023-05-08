@@ -1,0 +1,43 @@
+.qodef-reviews-per-mark {
+
+    .qodef-reviews-number-holder {
+        display: flex;
+        align-items: center;
+    }
+
+    .qodef-reviews-number-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        text-align: center;
+    }
+    .qodef-reviews-number {
+        font-size: 72px;
+        color: #ffd740;
+        font-weight: 700;
+        line-height: 1em;
+    }
+
+    .qodef-stars-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        .qodef-stars {
+            display: block;
+            i {
+                color: #ffd740;
+            }
+        }
+    }
+
+    .qodef-reviews-count {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .qodef-rating-percentage-wrapper {
+        width: 75%;
+        padding:29px 50px 40px ;
+        background-color: #fafafa;
+        border-left: 1px solid #e5e5e5;
+    }
+}

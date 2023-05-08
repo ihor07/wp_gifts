@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Portfolio List shortcode variation styles
+   ========================================================================== */
+
+.qodef-portfolio-list.qodef-item-layout--info-bottom-left {
+	
+	.qodef-e-content {
+		position: absolute;
+		bottom: 9%;
+		left: 4%;
+	}
+	
+	.qodef-e-content-inner {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: column;
+		
+		> a {
+			font-size: 18px;
+			font-weight: 600;
+			margin-top: 10px;
+		}
+		
+		* {
+			color: #fff;
+			z-index: 1;
+		}
+	}
+}

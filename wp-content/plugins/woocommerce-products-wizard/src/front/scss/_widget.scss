@@ -1,0 +1,240 @@
+.woocommerce-products-wizard-widget {
+    color: $body-color;
+    background-color: $body-bg;
+    margin-bottom: $spacer-md;
+
+    &.panel.card {
+        // wc single product tabs CSS overwrite
+        float: none;
+        width: auto;
+    }
+
+    &.is_stuck {
+        z-index: 4;
+        overflow: hidden;
+
+        @include media-breakpoint-down(md) {
+            box-shadow: $widget-stuck-box-shadow;
+        }
+
+        &.is-position-top {
+            box-shadow: $widget-stuck-box-shadow;
+        }
+    }
+
+    &.is-position-top {
+        @include media-breakpoint-up(md) {
+            .woocommerce-products-wizard-widget-body {
+                display: flex;
+
+                .woocommerce-products-wizard-widget-body-item {
+                    border-bottom: 0;
+
+                    &:not(:last-child) {
+                        border-right: 1px solid $gray-200;
+                    }
+
+                    &.is-product,
+                    &.is-product-placeholder,
+                    &.is-field,
+                    &.is-thumbnail {
+                        min-width: 15rem;
+                    }
+                }
+            }
+        }
+
+        &[aria-expanded="false"] {
+            display: none;
+        }
+    }
+
+    &[aria-expanded="false"] {
+        &.toggle-always {
+            display: none;
+        }
+
+        @each $breakpoint in map-keys($grid-breakpoints) {
+            @if (breakpoint-max($breakpoint, $grid-breakpoints)) {
+                &.toggle-#{$breakpoint} {
+                    @include media-breakpoint-down($breakpoint) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &:target {
+        display: block;
+    }
+
+    &-item {
+        &[class] {
+            margin: 0;
+        }
+
+        &.is-product {
+            display: flex;
+            gap: $spacer-md;
+        }
+
+        &.is-product-placeholder {
+            border: 2px dashed $gray-200;
+            border-radius: $border-radius;
+            padding: 2.5rem;
+        }
+
+        &-header,
+        &-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: $spacer-sm;
+        }
+
+        &-header {
+            margin-bottom: $spacer-sm;
+        }
+
+        &-thumbnail {
+            flex: 0 0 6rem;
+            max-width: 40%;
+
+            &[class] {
+                margin-bottom: 0;
+            }
+
+            img.img-thumbnail {
+                margin: 0;
+            }
+        }
+
+        &-inner {
+            flex: auto;
+        }
+
+        &-title {
+            &[class] {
+                font-size: inherit;
+                margin-bottom: 0;
+            }
+        }
+
+        &-data {
+            clear: both;
+        }
+
+        &-name {
+            border-bottom: 1px solid $gray-200;
+        }
+
+        &-value {
+            &[class] {
+                margin: 0;
+            }
+        }
+
+        .variation {
+            margin-bottom: $spacer-sm;
+            font-size: $font-size-sm;
+            line-height: $line-height-sm;
+        }
+    }
+
+    &-step {
+        &-thumbnail {
+            display: inline-block;
+            vertical-align: middle;
+
+            &[class] {
+                width: 1.5rem;
+                height: auto;
+            }
+        }
+
+        &-name {
+            vertical-align: middle;
+        }
+
+        &-nav {
+            display: flex;
+            justify-content: center;
+            gap: 0 $spacer-sm;
+            flex: 1;
+
+            &.disabled {
+                cursor: default;
+            }
+        }
+    }
+
+    &-body {
+        @include custom-scroll();
+
+        max-height: 100vh;
+        max-height: calc(100vh - 40px); // magic
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        list-style: none;
+
+        &[class] {
+            margin: 0;
+            padding: 0;
+        }
+
+        &-item {
+            scroll-snap-align: start;
+            padding: $spacer-sm;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $gray-200;
+            }
+
+            &.is-heading {
+                display: flex;
+                align-items: center;
+                font-weight: bolder;
+
+                &:not(.has-nav) {
+                    color: $body-color;
+                    background-color: $gray-100;
+                }
+            }
+
+            &.is-product,
+            &.is-product-placeholder,
+            &.is-field,
+            &.is-thumbnail {
+                flex: 0 15rem;
+            }
+        }
+    }
+
+    &-footer {
+        &-row {
+            display: flex;
+            border-top: 1px solid $gray-200;
+
+            &[class] {
+                margin: 0;
+            }
+        }
+
+        &-cell {
+            padding: $spacer-sm;
+
+            &[class] {
+                margin: 0;
+            }
+
+            &.is-caption {
+                flex: 1;
+            }
+        }
+    }
+
+    .woocommerce-products-wizard-message {
+        margin-bottom: 0;
+    }
+}

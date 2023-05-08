@@ -1,0 +1,75 @@
+/* ==========================================================================
+# Sticky Header default style
+========================================================================== */
+
+$sticky-header-height: 90px;
+
+.qodef-header-sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $sticky-header-height;
+	width: 100%;
+	background-color: #fff;
+	transform: translateY(-100%);
+	transition: transform 0.5s ease, top 0.5s ease;
+	z-index: 100;
+	
+	.qodef-header--sticky-display & {
+		transform: translateY(0%);
+	}
+	
+	.admin-bar.qodef-header--sticky-display & {
+		top: 32px;
+	}
+}
+
+.qodef-header-sticky-inner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	padding: $full-width-side-padding;
+	box-shadow: -1px 3px 7px 0 rgba(0, 0, 0, 0.04);
+	
+	&.qodef-content-grid {
+		padding: 0;
+	}
+	
+	.qodef-header-standard--right & {
+		
+		.qodef-header-logo-link {
+			margin-right: auto;
+		}
+	}
+	
+	.qodef-header-standard--left & {
+		justify-content: flex-start;
+		
+		.qodef-header-navigation {
+			margin-left: 20px;
+		}
+		
+		.qodef-widget-holder {
+			margin-left: auto !important;
+		}
+	}
+
+	#qodef-page-header .qodef-custom-header-layout & {
+		.qodef-widget-holder.qodef--one {
+			margin-left: 57px;
+
+			@include qodefScreenSize1440 {
+				margin-left: 26px;
+			}
+		}
+	}
+
+	.qodef-header--minimal & {
+		
+		.qodef-header-logo-link {
+			margin-right: auto;
+		}
+	}
+}

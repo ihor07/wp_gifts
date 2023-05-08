@@ -1,0 +1,107 @@
+/* ==========================================================================
+   #Footer styles - start
+   ========================================================================== */
+
+.qodef-page-footer--uncover {
+	
+	#qodef-page-outer {
+		z-index: 90; // needs to be larger than the footer and lower than the header
+	}
+	
+	#qodef-page-footer {
+		
+		.no-touchevents & {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+#qodef-page-footer {
+
+	.widget {
+		a,
+		p {
+			font-weight: 400;
+			font-size: 15px;
+			letter-spacing: .01em;
+		}
+
+		a {
+			text-transform: capitalize;
+		}
+	}
+
+	&.qodef-skin--light {
+
+		.widget {
+
+			p, a {
+				color: #ababab;
+			}
+
+			a:hover {
+				color: #fff;
+			}
+
+			@for $i from 1 to 7 {
+
+				h#{$i},
+				.qodef-h#{$i} {
+					@include qodefHeadingStyle(#{h#{$i}}, true, true);
+					color: #fff;
+					text-transform: capitalize;
+				}
+			}
+			
+			.qodef-social-icons-group {
+				
+				a {
+					color: #fff;
+				}
+			}
+		}
+
+		#qodef-page-footer-top-area,
+		#qodef-page-footer-bottom-area {
+			background-color: #000;
+		}
+
+		.widget {
+
+			.qodef-widget-title {
+				color: #fff;
+			}
+
+			&.widget_categories,
+			&.widget_archive,
+			&.widget_pages,
+			&.widget_meta,
+			&.widget_recent_comments,
+			&.widget_nav_menu {
+
+				ul {
+					li {
+
+						a {
+							&:before {
+								background-color: $text-color;
+							}
+						}
+
+						&:hover {
+							a {
+								color: var(--qode-header-light-color);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   #Footer styles - end
+   ========================================================================== */

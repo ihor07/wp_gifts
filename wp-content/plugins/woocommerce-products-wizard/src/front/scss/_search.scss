@@ -1,0 +1,64 @@
+.woocommerce-products-wizard-search-form {
+    position: relative;
+
+    &-input {
+        &.is-loading {
+            background-image: url("../images/spinner.svg");
+            background-repeat: no-repeat;
+            background-position: center right 1em;
+            background-size: 1em;
+        }
+
+        &:focus ~ .woocommerce-products-wizard-search-form-results {
+            display: block;
+        }
+    }
+
+    &-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        display: none;
+        max-height: 40rem;
+        max-height: min(90vh, 40rem);
+        overflow: auto;
+        padding: 0;
+        list-style: none;
+        background-color: $search-form-bg;
+        color: $search-form-color;
+        box-shadow: $search-form-box-shadow;
+        -webkit-backdrop-filter: $search-form-backdrop-filter;
+        backdrop-filter: $search-form-backdrop-filter;
+
+        &[class] {
+            padding: 0;
+        }
+
+        &:focus,
+        &:hover {
+            display: block;
+        }
+
+        &:empty {
+            display: none !important;
+        }
+
+        li {
+            list-style: none;
+
+            + li {
+                > a {
+                    border-top: 1px solid $gray-200;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            padding: $spacer-sm $spacer-md;
+            text-decoration: none;
+        }
+    }
+}

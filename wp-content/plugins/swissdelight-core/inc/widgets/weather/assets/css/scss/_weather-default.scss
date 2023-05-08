@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Weather Widget style - begin
+   ========================================================================== */
+
+.qodef-weather-widget {
+	
+	.qodef-m-inner {
+		display: flex;
+		align-items: center;
+	}
+	
+	.qodef-m-weather {
+		margin-right: 20px;
+		flex-shrink: 0;
+	}
+	
+	.qodef-m-weather-icon {
+		font-size: 50px;
+		line-height: 1;
+		margin-bottom: 15px;
+		
+		&:before {
+			content: '';
+		}
+		
+		&.qodef--mist,
+		&.qodef--haze {
+			
+			&:before {
+				content: "\f75f";
+			}
+		}
+		
+		&.qodef--snow,
+		&.qodef--light-snow {
+			
+			&:before {
+				content: "\f2dc";
+			}
+		}
+		
+		&.qodef--thunderstorm {
+			
+			&:before {
+				content: "\f0e7";
+			}
+		}
+		
+		&.qodef--rain,
+		&.qodef--drizzle,
+		&.qodef--light-rain,
+		&.qodef--moderate-rain,
+		&.qodef--light-intensity-drizzle,
+		&.qodef--light-intensity-shower-rain,
+		&.qodef--light-rain-and-snow {
+			
+			&:before {
+				content: "\f73d";
+			}
+		}
+		
+		&.qodef--shower-rain,
+		&.qodef--heavy-intensity-rain {
+			
+			&:before {
+				content: "\f740";
+			}
+		}
+		
+		&.qodef--broken-clouds,
+		&.qodef--overcast-clouds {
+			
+			&:before {
+				content: "\f0c2";
+			}
+		}
+
+		&.qodef--clouds,
+		&.qodef--scattered-clouds,
+		&.qodef--few-clouds {
+			
+			&:before {
+				content: "\f6c4";
+			}
+		}
+
+		&.qodef--clear,
+		&.qodef--clear-sky,
+		&.qodef--sky-is-clear,
+		&.qodef--sun {
+			
+			&:before {
+				content: "\f185";
+			}
+		}
+	}
+	
+	.qodef-m-temperature {
+		font-size: 25px;
+		
+		&.qodef--high-low {
+			
+			.qodef-e-temperature-low {
+				
+				&:after {
+					content: '-';
+				}
+			}
+		}
+	}
+	
+	.qodef-m-weather-info {
+		
+		p {
+			margin: 0;
+		}
+	}
+	
+	.qodef-e-heading {
+		margin-bottom: 15px;
+		
+		> * {
+			margin: 0;
+		}
+	}
+	
+	.qodef-e-heading-description {
+		margin-top: 10px;
+	}
+	
+	.qodef-m-other-days {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 25px;
+		
+		.qodef-m-inner {
+			flex-direction: column;
+		}
+	}
+	
+	&.qodef-layout--simple {
+		
+		.qodef-m-city {
+			padding: 0 10px;
+		}
+	}
+}
+
+$wp-widgets-area-map: (
+	'':(
+		weather-icon-color: var(--qode-main-color),
+		location-color: null,
+		description-color: var(--qode-main-color),
+		text-color: null,
+	),
+	'#qodef-page-footer':(
+		weather-icon-color: #fff,
+		location-color: #fff,
+	),
+);
+
+@each $key, $values in $wp-widgets-area-map {
+	$wp-widgets-area-map-merged: map-merge($wp-widgets-area-map, $values);
+	
+	#{$key} .qodef-weather-widget {
+		@if (map-get($values, 'text-color')) {
+			color: map-get($values, 'text-color');;
+		}
+		
+		.qodef-m-weather-icon {
+			
+			@if (map-get($values, 'weather-icon-color')) {
+				color: map-get($values, 'weather-icon-color');;
+			}
+		}
+		
+		.qodef-e-heading-city {
+			
+			@if (map-get($values, 'location-color')) {
+				color: map-get($values, 'location-color');;
+			}
+		}
+		
+		.qodef-e-heading-description {
+			
+			@if (map-get($values, 'description-color')) {
+				color: map-get($values, 'description-color');;
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Weather Widget style - end
+   ========================================================================== */

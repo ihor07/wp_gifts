@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Header layout responsive styles
+   ========================================================================== */
+
+@include qodefScreenSize1024 {
+	
+	.qodef-header--vertical {
+  
+		#qodef-page-header-inner {
+			display: none;
+		}
+		
+		#qodef-page-outer,
+		#qodef-page-footer {
+			padding-left: 0;
+		}
+	}
+}

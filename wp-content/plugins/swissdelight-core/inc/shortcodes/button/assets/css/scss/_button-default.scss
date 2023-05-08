@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Button shortcode styles
+   ========================================================================== */
+
+.qodef-button {
+	
+	&.qodef-html--link {
+		@include qodefButtonDefaultStyle();
+		@include qodefButtonSize();
+	}
+	
+	&.qodef-size--small {
+		@include qodefButtonSize(small);
+	}
+	
+	&.qodef-size--large {
+		@include qodefButtonSize(large);
+	}
+	
+	&.qodef-size--full {
+		width: 100%;
+		text-align: center;
+	}
+
+	&.qodef-has-icon {
+		span.qodef-m-text {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+		}
+
+		.icon-arrows-slim-right{
+			padding-left: 12px;
+
+			&:before {
+				font-size: 2.55em;
+				vertical-align: middle;
+				line-height: inherit;
+			}
+		}
+
+		&.qodef-no-text {
+			padding: 0;
+
+			.icon-arrows-slim-right {
+				padding-left: 0;
+			}
+		}
+	}
+}

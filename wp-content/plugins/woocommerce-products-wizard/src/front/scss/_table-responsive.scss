@@ -1,0 +1,35 @@
+.wcpw-table-responsive {
+    @include media-breakpoint-down(md) {
+        &-hidden,
+        th {
+            display: none;
+        }
+
+        td[data-th] {
+            display: flex;
+            justify-content: space-between;
+            gap: 0 $spacer-md;
+            width: auto !important;
+            border-right: 0 !important;
+            border-bottom: 0 !important;
+            border-left: 0 !important;
+            text-align: left;
+            text-align: start;
+
+            &::before {
+                content: attr(data-th);
+                max-width: 50%;
+                font-weight: 700;
+            }
+        }
+
+        tr {
+            &:nth-child(even) {
+                &,
+                td {
+                    background-color: $table-responsive-accent-bg;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Custom Font shortcode styles
+   ========================================================================== */
+
+.qodef-custom-font {
+	position: relative;
+	margin: 0;
+
+	.qodef-m-word {
+		display: inline-block;
+	}
+
+	.qodef-m-empty-space {
+
+		&:last-child {
+			display: none;
+		}
+	}
+
+	&.qodef-appear-animation--enabled {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity .6s ease-out, transform .8s ease;
+		will-change: transform;
+
+		&.qodef--appeared,
+		.elementor-editor-active & {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

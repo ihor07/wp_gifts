@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Portfolio Single styles
+   ========================================================================== */
+
+.qodef-portfolio-single {
+	@include qodefRelativeLayout();
+
+	.qodef-media {
+
+		iframe {
+			max-height: calc(56.25vw);
+		}
+	}
+
+	.qodef-portfolio-title {
+		margin: 0 0 25px;
+
+		@include qodefScreenSize1024 {
+			margin-top: 0;
+		}
+	}
+
+	.qodef-portfolio-info {
+
+		> * {
+			display: flex;
+			margin-bottom: 10px;
+			align-items: baseline;
+			flex-wrap: wrap;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.qodef-e-title {
+			margin: 0 14px 5px 0;
+			text-transform: capitalize;
+		}
+
+		.qodef-social-title {
+			@include qodefHeadingStyle('h6');
+			text-transform: capitalize;
+			letter-spacing: 0;
+			margin: 0 14px 5px 0;
+		}
+
+		.qodef-social-share {
+			
+			ul {
+				vertical-align: sub;
+			}
+			
+			a {
+				color: $heading-color;
+			}
+		}
+
+		p, a {
+			margin: 0;
+			color: $text-color;
+		}
+
+		.qodef-info--category {
+			> a {
+				@include qodefH7Style();
+				color: var(--qode-main-color);
+
+				&:hover {
+					color: $heading-color;
+				}
+			}
+		}
+
+		.qodef-category-separator {
+			color: var(--qode-main-color);
+		}
+
+		.qodef-info--tag {
+			> a {
+				font-family: $heading-font;
+				font-style: italic;
+				font-size: 18px;
+				margin-right: 20px;
+				letter-spacing: .01em;
+				font-weight: 500;
+
+				&:hover {
+					color: $heading-color;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				};
+			}
+		}
+
+		.qodef-tag-separator:after {
+			right: 8px;
+		}
+	}
+
+	.qodef-variations--small {
+		.qodef-portfolio-title {
+			margin-top: 50px;
+
+			@include qodefScreenSize1024 {
+				margin-top: 0;
+			}
+		}
+
+		.qodef-portfolio-info {
+			margin-top: 27px;
+		}
+	}
+
+	.qodef-variations--big {
+		.qodef-e-content {
+			margin-top: -2px;
+		}
+
+		.qodef-portfolio-title {
+			margin-top: 66px;
+
+			@include qodefScreenSize1024 {
+				margin-top: 41px;
+			}
+		}
+
+		.qodef-portfolio-info {
+			margin-top: 155px !important;
+		}
+	}
+
+	.qodef-col--7-custom {
+		width: 58.5%;
+	}
+
+	.qodef-col--5-custom {
+		width: 41.5%;
+	}
+
+	.qodef-col--7-custom,
+	.qodef-col--5-custom {
+		@include qodefScreenSize1024 {
+			width: 100%;
+		}
+	}
+
+	&.qodef-layout--images-big {
+		.qodef-portfolio-title {
+			margin-top: 25px;
+
+			@include qodefScreenSize1024 {
+				margin-top: 0;
+			}
+		}
+
+		.qodef-variations--big .qodef-portfolio-info {
+			margin-top: 114px !important;
+
+			@include qodefScreenSize1024 {
+				margin-top: 0 !important;
+			}
+		}
+	}
+
+	&.qodef-layout--gallery-big {
+		.qodef-portfolio-title {
+			//margin-top: 65px;
+		}
+	}
+}

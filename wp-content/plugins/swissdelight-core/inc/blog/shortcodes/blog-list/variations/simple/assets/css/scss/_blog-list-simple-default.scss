@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Blog List Simple styles
+   ========================================================================== */
+
+.qodef-blog {
+	
+	&.qodef-item-layout--simple {
+		
+		article {
+			
+			.qodef-e-inner {
+				display: flex;
+				align-items: flex-start;
+			}
+
+			.qodef-e-info *{
+				@include qodefScreenSize1440 {
+					display: inline;
+				}
+			}
+
+			.qodef-e-top-holder {
+				margin-bottom: 1px;
+				line-height: 1.125em;
+
+				a {
+					font-size: 11px;
+					letter-spacing: .15em;
+					font-weight: 400;
+				}
+			}
+			
+			.qodef-e-media-image {
+				flex-shrink: 0;
+				width: 94px;
+				max-width: 94px;
+				margin: 0 20px 0 0;
+			}
+
+			.qodef-e-title {
+				text-transform: capitalize;
+			}
+		}
+	}
+}
+
+.widget_swissdelight_core_blog_list  {
+	.qodef-widget-title {
+		margin-bottom: 25px;
+	}
+}

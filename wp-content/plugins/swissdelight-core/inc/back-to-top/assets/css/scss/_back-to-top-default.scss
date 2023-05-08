@@ -1,0 +1,102 @@
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+
+#qodef-back-to-top {
+	position: fixed;
+	width: 40px;
+	height: 40px;
+	right: 25px;
+	bottom: 40px;
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10000;
+	
+	.qodef-back-to-top-icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		font-size: 20px;
+		color: #fff;
+		background-color: var(--qode-main-color);
+		border: 1px solid var(--qode-main-color);
+		overflow: hidden;
+		transition: $color-transition, $background-color-transition, $border-color-transition;
+		
+		* {
+			display: block;
+			line-height: inherit;
+		}
+	}
+	
+	.qodef-back-to-top-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		@include qodefTextAccent( $heading-color, 13px);
+	}
+	
+	.qodef-back-to-top-line {
+		position: absolute;
+		left: calc(50% - 1px);
+		bottom: 40px;
+		transform: scaleY(1);
+		width: 1px;
+		height: 42px;
+		background-color: $heading-color;
+		opacity: .5;
+		transition: height $transition-timing;
+		pointer-events: none;
+	}
+
+	svg {
+		display: block;
+		width: 18px;
+		height: auto;
+		fill: currentColor;
+	}
+	
+	&:hover {
+		
+		.qodef-back-to-top-icon {
+			color: var(--qode-main-color);
+			background-color: #fff;
+		}
+
+		.qodef-back-to-top-line {
+			animation: qodef-back-to-top-line .46s forwards cubic-bezier(.33,.02,0,.93);
+		}
+	}
+	
+	&.qodef--off {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.15s ease, visibility .0s .15s;
+	}
+	
+	&.qodef--on {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.3s ease;
+	}
+	
+	&.qodef-skin--light,
+	&.qodef--light {
+		
+		.qodef-back-to-top-text {
+			color: $background-color;
+		}
+
+		.qodef-back-to-top-line {
+			background-color: $background-color;
+		}
+	}
+}
+
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */

@@ -1,0 +1,20 @@
+.qodef-button {
+
+    &.qodef-layout--filled {
+    
+        &.qodef-html--link {
+            @include qodefButtonFilledColor();
+            @include qodefButtonArrowDefault();
+
+            .qodef-m-svg-icon {
+                transform: translateY(-8px) translateX(10px);
+                margin-right: 12px;
+            }
+    
+            &:hover {
+                @include qodefButtonFilledHoverColor();
+                @include qodefButtonArrowHover();
+            }
+        }
+    }
+}

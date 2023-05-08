@@ -1,0 +1,81 @@
+.wcpw-data-table {
+    counter-reset: wcpw-data-table -1;
+
+    &-item {
+        &-controls {
+            width: 2em;
+        }
+
+        &-open-modal {
+            width: 100%;
+            text-align: center;
+
+            &::before {
+                content: "#" counter(wcpw-data-table) ":";
+                counter-increment: wcpw-data-table;
+                margin-right: 0.25em;
+            }
+
+            &::after {
+                content: attr(data-name);
+                color: #999;
+                margin-left: 0.25em;
+            }
+        }
+    }
+
+    tr[data-key="source"] {
+        // availability rules
+        &[data-value="none"] {
+            & ~ tr[data-key="product"],
+            & ~ tr[data-key="category"],
+            & ~ tr[data-key="attribute"],
+            & ~ tr[data-key="attribute_values"],
+            & ~ tr[data-key="custom_field_name"],
+            & ~ tr[data-key="custom_field_value"],
+            & ~ tr[data-key="condition"],
+            & ~ tr[data-key="inner_relation"] {
+                display: none;
+            }
+        }
+
+        &[data-value="product"] {
+            & ~ tr[data-key="category"],
+            & ~ tr[data-key="attribute"],
+            & ~ tr[data-key="attribute_values"],
+            & ~ tr[data-key="custom_field_name"],
+            & ~ tr[data-key="custom_field_value"] {
+                display: none;
+            }
+        }
+
+        &[data-value="category"] {
+            & ~ tr[data-key="product"],
+            & ~ tr[data-key="attribute"],
+            & ~ tr[data-key="attribute_values"],
+            & ~ tr[data-key="custom_field_name"],
+            & ~ tr[data-key="custom_field_value"] {
+                display: none;
+            }
+        }
+
+        &[data-value="attribute"] {
+            & ~ tr[data-key="product"],
+            & ~ tr[data-key="category"],
+            & ~ tr[data-key="custom_field_name"],
+            & ~ tr[data-key="custom_field_value"] {
+                display: none;
+            }
+        }
+
+        &[data-value="custom_field"] {
+            & ~ tr[data-key="product"],
+            & ~ tr[data-key="category"],
+            & ~ tr[data-key="attribute"],
+            & ~ tr[data-key="attribute_values"],
+            & ~ tr[data-key="inner_relation"] {
+                display: none;
+            }
+        }
+    }
+}

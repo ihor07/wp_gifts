@@ -1,0 +1,52 @@
+/*
+Theme Name: SwissDelight
+Theme URI: https://swissdelight.qodeinteractive.com
+Description: Chocolate & Cake Shop Theme
+Author: Elated Themes
+Author URI: https://qodeinteractive.com
+Text Domain: swissdelight
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments, translation-ready
+Version: 1.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body .woocommerce-products-wizard .form-control-sm {
+	text-align: center;
+	border-left: 0px solid #ced4da;
+	border-right: 0px solid #ced4da;
+    border-radius: unset;
+	border-color: black;
+	width: 44px;
+}
+.qodef-quantity-minus, .qodef-quantity-plus {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+	width: 18px;
+	text-align:center;
+	border: 1px solid black;
+}
+.qodef-quantity-minus {
+	border-right: 0px solid #ced4da;
+}
+.qodef-quantity-plus {
+	border-left: 0px solid #ced4da;
+	
+}
+.qodef-quantity-minus:before {
+	content: '-';
+	display: block;
+	font-weight: bold;
+}
+.qodef-quantity-plus:before {
+	content: '+';
+	display: block;
+	font-weight: bold;
+}
+.qodef-quantity-buttons input {
+	pointer-events: none;
+}
+

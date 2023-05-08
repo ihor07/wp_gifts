@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Portfolio List shortcode variation hover styles
+   ========================================================================== */
+
+.qodef-item-layout--info-on-hover.qodef-hover-animation--fade-in {
+	
+	.qodef-e-content {
+		opacity: 0;
+		transition: opacity .2s ease-out;
+	}
+
+	.qodef-e-title,
+	.qodef-info--category {
+		opacity: 0;
+		transform: translateY(100%);
+		transition: opacity .2s ease-out, transform .36s cubic-bezier(.33,.02,0,.93);
+	}
+	
+	.qodef-e:hover {
+		
+		.qodef-e-content {
+			opacity: 1;
+		}
+
+		.qodef-e-title,
+		.qodef-info--category {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.qodef-info--category {
+			transition-delay: .1s;
+		}
+	}
+}

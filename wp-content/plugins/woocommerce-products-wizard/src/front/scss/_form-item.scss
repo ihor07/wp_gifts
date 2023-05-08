@@ -1,0 +1,536 @@
+.woocommerce-products-wizard-form-item {
+    margin-bottom: $spacer-md;
+
+    &.panel.card {
+        // wc single product tabs CSS overwrite
+        float: none;
+        width: auto;
+    }
+
+    &.type-1 &,
+    &.type-2 &,
+    &.type-3 &,
+    &.type-4 & {
+        &-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 $spacer-md;
+        }
+
+        &-thumbnail {
+            &-wrapper {
+                flex: 300px;
+                max-width: 100%;
+            }
+        }
+
+        &-inner {
+            flex: 10 300px;
+            max-width: 100%;
+        }
+    }
+
+    &.type-5,
+    &.type-9 {
+        .woocommerce-products-wizard-form-item {
+            &-content {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0 $spacer-sm;
+
+                &-thumbnail {
+                    flex: 300px;
+                    max-width: 100%;
+                }
+
+                &-body {
+                    flex: 10 300px;
+                    max-width: 100%;
+                }
+            }
+
+            &-link {
+                .woocommerce-products-wizard-form-item-title {
+                    @include icon(link, after);
+
+                    &::after {
+                        vertical-align: baseline;
+                    }
+                }
+            }
+
+            &-modal {
+                .woocommerce-products-wizard-form-item-title {
+                    font-size: 1.5rem;
+                    font-weight: bolder;
+                }
+
+                &-close {
+                    position: absolute;
+                    top: $spacer-sm;
+                    right: $spacer-sm;
+                    inset-inline-end: $spacer-sm;
+                    z-index: 5;
+
+                    @at-root [dir="rtl"] & {
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    &.type-6 {
+        position: relative;
+        transition: box-shadow 0.25s ease;
+
+        @include media-breakpoint-up(sm) {
+            &:hover,
+            &:focus,
+            &:focus-within {
+                box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05), 0 0 4px rgba(0, 0, 0, .1);
+
+                .woocommerce-products-wizard-form-item-inner {
+                    z-index: 6;
+                    height: auto;
+                    overflow: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.type-6 & {
+        &-body {
+            @include media-breakpoint-up(sm) {
+                padding: $spacer-md $spacer-md $spacer-sm;
+            }
+        }
+
+        &-inner {
+            @include media-breakpoint-up(sm) {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 0;
+                flex: 1 100%;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                padding: 0 $spacer-md $spacer-md;
+                background-color: #fff;
+                box-shadow: 0 0 10px 3px rgba(0,0,0,.1), 0 0 4px rgba(0,0,0,.2);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    right: 0;
+                    left: 0;
+                    z-index: 1;
+                    height: 10px;
+                    background-color: #fff;
+                }
+            }
+        }
+
+        &-title {
+            text-transform: uppercase;
+        }
+
+        &-check {
+            margin-bottom: $spacer-sm;
+        }
+    }
+
+    &.type-1,
+    &.type-2,
+    &.type-3,
+    &.type-7 {
+        transition: box-shadow 0.25s ease;
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, .05), 0 0 4px rgba(0, 0, 0, .1);
+        }
+    }
+
+    &.type-7 & {
+        &-body {
+            padding: $spacer-md;
+        }
+    }
+
+    &.type-7 &,
+    &.type-8 & {
+        &-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacer-md;
+        }
+
+        &-thumbnail {
+            margin-bottom: 0;
+        }
+
+        &-inner {
+            flex: 1;
+        }
+
+        &-variations-item {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-title[class] {
+        font-size: $form-item-title-font-size;
+    }
+
+    &-thumbnail {
+        position: relative;
+        background-color: $gray-100;
+
+        &-wrapper {
+            &:empty {
+                display: none;
+            }
+        }
+
+        &-link {
+            display: block;
+        }
+
+        &-gallery {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+            &.has-items-count-1 & {
+                &-item {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            &-wrapper {
+                position: relative;
+            }
+
+            &-item {
+                position: relative;
+                z-index: 2;
+                flex: 1;
+                font-size: 0;
+
+                &:hover,
+                &:focus,
+                &:focus-within {
+                    &::before {
+                        color: color-contrast($primary);
+                        border-bottom-color: $primary;
+                    }
+
+                    & + .woocommerce-products-wizard-form-item-thumbnail-gallery-item-image-wrapper {
+                        display: flex;
+                    }
+                }
+
+                &.is-static {
+                    & + .woocommerce-products-wizard-form-item-thumbnail-gallery-item-image-wrapper {
+                        display: flex;
+                        z-index: 0;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: 0 1px;
+                    border-bottom: 3px solid $gray-400;
+                    transition: border-bottom-color 0.25s ease-in-out;
+                }
+
+                &-image {
+                    width: auto;
+                    max-height: 100%;
+
+                    &-wrapper {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                        display: none;
+                        align-items: center;
+                        background-color: $thumbnail-bg;
+                    }
+                }
+            }
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+
+            &.wp-post-image {
+                margin-bottom: 0; // themes styles overwrite
+            }
+        }
+    }
+
+    &-variations {
+        display: flex;
+        flex: 100%;
+        flex-wrap: wrap;
+        gap: 0 $spacer-md;
+
+        &[class] {
+            margin-bottom: $spacer-sm;
+        }
+
+        &-item {
+            align-items: center;
+            flex: 300px;
+            gap: 0 $spacer-md;
+
+            &.form-group {
+                margin-bottom: $spacer-sm;
+            }
+
+            &-name,
+            &-value {
+                &-wrapper {
+                    flex: 1 120px;
+                    float: none;
+                }
+            }
+
+            &-value {
+                &.form-control {
+                    margin-bottom: $spacer-sm;
+                }
+
+                &-wrapper[class] {
+                    margin: 0;
+                }
+
+                &-thumbnail {
+                    margin: 2px;
+                }
+
+                &-caption {
+                    &.is-image {
+                        padding: 0;
+                    }
+                }
+
+                &-label {
+                    margin-bottom: $spacer-sm;
+                }
+
+                &-input {
+                    &.is-hidden {
+                        &:focus ~ .woocommerce-products-wizard-form-item-variations-item-value-caption {
+                            outline: 0;
+                            box-shadow: $btn-focus-box-shadow;
+                        }
+
+                        &:checked ~ .woocommerce-products-wizard-form-item-variations-item-value-caption {
+                            color: color-contrast($secondary);
+                            border-color: $secondary;
+                            background-color: $secondary;
+
+                            &.is-image {
+                                border-color: $primary;
+                            }
+                        }
+
+                        &[disabled] ~ .woocommerce-products-wizard-form-item-variations-item-value-caption {
+                            @include box-shadow(none);
+                            color: $secondary;
+                            background-color: transparent;
+                            cursor: not-allowed;
+                            opacity: $btn-disabled-opacity;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-reset {
+            margin-bottom: $spacer-sm;
+            font-size: 0.8em;
+
+            &-wrapper {
+                display: flex;
+                justify-content: end;
+                flex: 100%;
+            }
+        }
+    }
+
+    &-gallery {
+        @include custom-scroll();
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        margin-bottom: $spacer-md;
+
+        &.row[class] {
+            flex-wrap: nowrap;
+        }
+
+        &-item {
+            display: block;
+            text-align: center;
+        }
+
+        > * {
+            scroll-snap-align: start;
+        }
+    }
+
+    &-tags {
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        z-index: 3; // see type-6 z-index
+        line-height: 1;
+
+        &-value {
+            color: color-contrast($primary);
+            background-color: $primary;
+        }
+    }
+
+    &-link {
+        display: block;
+    }
+
+    &-availability {
+        flex: 100%;
+    }
+
+    &-sku {
+        color: $text-muted;
+
+        &[class] {
+            margin-bottom: $spacer-sm;
+        }
+
+        &-name,
+        &-value {
+            display: inline;
+            margin: auto;
+        }
+
+        &-name {
+            font-size: $font-size-sm;
+            line-height: $line-height-sm;
+
+            &[class] {
+                font-weight: normal;
+            }
+        }
+    }
+
+    &-check {
+        margin-bottom: $spacer-xs;
+
+        &.custom-control {
+            display: inline-flex;
+        }
+    }
+
+    &-choose {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-quantity {
+        display: flex;
+        max-width: 5rem;
+
+        .quantity {
+            display: flex;
+            flex: 1;
+        }
+    }
+
+    &-price {
+        display: inline-block;
+        margin-bottom: $spacer-xs;
+        vertical-align: middle;
+        font-size: $form-item-price-font-size;
+        font-weight: 700;
+        line-height: 1;
+
+        &[class] {
+            font-weight: normal;
+            margin-bottom: $spacer-xs;
+        }
+
+        del {
+            font-size: $font-size-base;
+            line-height: $line-height-base;
+        }
+
+        ins {
+            text-decoration: none;
+        }
+    }
+
+    &-controls {
+        float: right;
+        margin-bottom: $spacer-xs;
+
+        &.input-group {
+            width: auto;
+        }
+    }
+
+    &-control {
+        white-space: nowrap;
+    }
+
+    &-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 $spacer-sm;
+        clear: both;
+        margin-bottom: 0;
+    }
+}
+
+section.woocommerce-products-wizard form.woocommerce-products-wizard-form-item-footer.cart[class] {
+    // overwrite most of outer styles
+    margin-bottom: 0;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+

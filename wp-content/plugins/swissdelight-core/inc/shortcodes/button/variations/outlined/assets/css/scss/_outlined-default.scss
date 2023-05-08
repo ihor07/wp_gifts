@@ -1,0 +1,19 @@
+.qodef-button {
+
+    &.qodef-layout--outlined {
+        @include qodefButtonOutlinedColor();
+        @include qodefButtonBorderDefault();
+        @include qodefButtonArrowDefault();
+
+        .qodef-m-svg-icon {
+            transform: translateY(-8px) translateX(10px);
+            margin-right: 12px;
+        }
+
+        &:hover {
+            @include qodefButtonOutlinedHoverColor();
+            @include qodefButtonBorderHover();
+            @include qodefButtonArrowHover();
+        }
+    }
+}

@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Item Showcase shortcode styles
+   ========================================================================== */
+
+$space-between-items: 80px;
+$offset-size: 70px;
+$offset-animation: opacity .55s cubic-bezier(.23, 1, .32, 1), transform .55s cubic-bezier(.23, 1, .32, 1);
+
+.qodef-item-showcase {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	visibility: hidden;
+	
+	.qodef-m-image {
+		position: relative;
+		flex-shrink: 0;
+		margin: 0 $space-between-items;
+		opacity: 0;
+		transform: translateY($offset-size);
+		transition: $offset-animation;
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.qodef-m-highlight-text {
+		position: absolute;
+		left: 50%;
+		bottom: -30px;
+		font-family: $additional-font;
+		font-size: 79px;
+		color: rgba(223, 187, 129, .4);
+		transform: translateX(calc(-50% - 30px)) rotate(-15deg);
+	}
+	
+	.qodef-m-items {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		
+		&.qodef--left {
+			text-align: left;
+			
+			.qodef-e-dot {
+				right: 0;
+			}
+		}
+		
+		&.qodef--right {
+			text-align: right;
+			
+			.qodef-e-dot {
+				left: 0;
+			}
+		}
+	}
+	
+	.qodef-m-item {
+		@include qodefRelativeLayout();
+		margin-top: $space-between-items;
+		opacity: 0;
+		transform: translateY($offset-size);
+		transition: $offset-animation;
+		
+		&:first-child {
+			margin-top: 0;
+		}
+		
+		@for $i from 1 through 6 {
+			
+			&:nth-child(#{$i}) {
+				transition-delay: #{$i*200}ms;
+			}
+		}
+		
+		.qodef-e-line {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: 0;
+			background-color: #cac6be;
+			margin-top: 33px;
+		}
+		
+		.qodef-e-dot {
+			position: absolute;
+			bottom: -2px;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: #000;
+		}
+	}
+	
+	.qodef-e-title {
+		margin: 0 0 10px;
+		text-transform: none;
+	}
+	
+	.qodef-e-title-link {
+		@include qodefTypographyLayout();
+		
+		&:hover {
+			color: var(--qode-main-color);
+		}
+	}
+	
+	.qodef-e-text {
+		margin: 0 0 11px;
+	}
+	
+	&.qodef--init {
+		visibility: visible;
+		
+		.qodef-m-image {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		
+		.qodef-m-item {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}

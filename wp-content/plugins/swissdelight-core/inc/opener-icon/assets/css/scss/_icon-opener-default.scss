@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Opener icon styles
+   ========================================================================== */
+
+.qodef-opener-icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	
+	.qodef-m-icon {
+		position: relative;
+		visibility: visible;
+		
+		&.qodef--close {
+			position: absolute;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+		}
+	}
+	
+	&.qodef-source--icon-pack {
+		font-size: 35px;
+		
+		* {
+			display: inline-block;
+			line-height: inherit;
+			
+			&:before {
+				display: inline-block;
+				line-height: inherit;
+			}
+		}
+	}
+	
+	&.qodef-source--svg-path {
+		
+		span {
+			position: relative;
+			
+			> * {
+				vertical-align: middle;
+			}
+			
+			> svg *,
+			path {
+				fill: currentColor;
+				stroke: currentColor;
+			}
+		}
+	}
+	
+	&.qodef-source--predefined {
+		color: $heading-color;
+
+		.qodef-m-text {
+			position: relative;
+			display: block;
+			width: 69px;
+			height: 69px;
+			border-radius: 100%;
+			line-height: 69px;
+			text-align: center;
+			font-weight: 400;
+			font-size: 13px;
+			letter-spacing: .15em;
+			text-transform: uppercase;
+			color: $heading-color;
+
+			.qodef-m-svg-icon {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 69px;
+				height: 69px;
+
+				circle {
+					fill: none;
+					stroke: rgba(36, 28, 16, .4);
+					stroke-dasharray: 210;
+					transition: stroke-dashoffset .6s cubic-bezier(.24,0,.16,1.01);
+
+					&:first-child {
+						stroke-dashoffset: 210;
+					}
+
+					&:last-child {
+						stroke: rgba(36, 28, 16, .2);
+						stroke-dashoffset: 0;
+					}
+				}
+			}
+
+			@include qodefScreenSize680 {
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+				border: 1px solid rgba(36, 28, 16, .2);
+
+				.qodef-fullscreen-menu--opened & {
+					border-color: rgba(255,255,255, .3);
+				}
+
+				.qodef-m-svg-icon {
+					display: none;
+				}
+			}
+		}
+
+		&:hover {
+
+			.qodef-m-text {
+
+				.qodef-m-svg-icon {
+
+					circle {
+
+						&:first-child {
+							stroke-dashoffset: 0;
+						}
+
+						&:last-child {
+							stroke-dashoffset: -210;
+						}
+					}
+				}
+			}
+		}
+	}
+}

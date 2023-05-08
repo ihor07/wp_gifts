@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Single Images shortcode styles
+   ========================================================================== */
+
+.qodef-single-image {
+
+	img {
+		display: block;
+	}
+
+	&.qodef-appear-animation--enabled {
+
+		.qodef-m-image {
+			opacity: 0;
+			transition: opacity .6s ease-out, transform .8s ease;
+		}
+
+		&.qodef-direction--right {
+
+			.qodef-m-image {
+				transform: translateX(-30px);
+			}
+		}
+
+		&.qodef-direction--left {
+
+			.qodef-m-image {
+				transform: translateX(30px);
+			}
+		}
+
+		&.qodef-direction--top {
+
+			.qodef-m-image {
+				transform: translateY(30px);
+			}
+		}
+
+		&.qodef-direction--bottom {
+
+			.qodef-m-image {
+				transform: translateY(-30px);
+			}
+		}
+
+		&.qodef--appeared,
+		.elementor-editor-active & {
+
+			.qodef-m-image {
+				opacity: 1;
+				transform: translate(0, 0);
+			}
+		}
+	}
+
+	&.qodef-hover--move {
+		overflow: hidden;
+
+		a {
+
+			img {
+				transform: scale(1.05) translateX(0);
+				transition: transform .4s ease-out;
+				will-change: transform;
+			}
+
+			&:hover {
+
+				img {
+					transform: scale(1.05) translateX(5px);
+				}
+			}
+		}
+	}
+}

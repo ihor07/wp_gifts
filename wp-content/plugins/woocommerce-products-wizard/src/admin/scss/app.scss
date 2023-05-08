@@ -1,0 +1,48 @@
+@import "data-table";
+@import "modal";
+@import "multi-select";
+@import "settings";
+@import "thumbnail";
+@import "steps";
+@import "templates-list";
+@import "thumbnail-generator";
+
+#woocommerce_products_wizard_included_scripts {
+    height: auto;
+}
+
+#wcpw-bulk-edit-fields .select2-container {
+    min-width: 100%;
+}
+
+.wcpw {
+    &-data-table,
+    &-steps-list,
+    &-group {
+        &.wp-list-table.widefat.striped tr td {
+            position: relative;
+            display: table-cell; // prevent mobile bad view
+            padding: 15px 10px;
+        }
+    }
+
+    &-form-item-template-preview {
+        img {
+            display: block;
+            max-height: 350px;
+            margin: 1rem auto;
+        }
+    }
+
+    &-license-status {
+        font-weight: bolder;
+
+        &.is-activated {
+            color: #32cd32;
+        }
+
+        &.not-activated {
+            color: #ff6347;
+        }
+    }
+}

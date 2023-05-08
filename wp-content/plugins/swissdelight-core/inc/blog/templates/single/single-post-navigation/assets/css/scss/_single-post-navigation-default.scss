@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Single Post Navigation styles
+   ========================================================================== */
+
+#qodef-single-post-navigation {
+	@include qodefRelativeLayout();
+	margin: 25px 0 3px;
+	
+	.qodef-m-inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.qodef-m-nav-image {
+		width: 100px;
+
+		@include qodefScreenSize680 {
+			display: none;
+		}
+	}
+
+	.qodef-m-nav-cat {
+		margin-left: -3px;
+
+		&:before {
+			content: ',';
+			position: relative;
+			left: -1px;
+		}
+	}
+
+	.qodef-m-top {
+		font-size: 11px;
+		text-transform: uppercase;
+		letter-spacing: .15em;
+		font-weight: 400;
+		color: var(--qode-main-color);
+
+		> span {
+			&:hover {
+				color: $heading-color;
+			}
+		}
+
+		@include qodefScreenSize1024 {
+			line-height: 1.6;
+		}
+
+		@include qodefScreenSize680 {
+			display: none;
+		}
+	}
+	
+	.qodef-m-nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		
+		.qodef-m-nav-info {
+			display: flex;
+			flex-direction: column;
+
+			@include qodefScreenSize680 {
+				max-width: 160px;
+			}
+		}
+		
+		&.qodef--prev {
+			left: 0;
+
+			.qodef-m-nav-info {
+				margin-left: 25px;
+
+				@include qodefScreenSize680 {
+					margin-left: 0;
+				}
+			}
+		}
+		
+		&.qodef--next {
+			flex-direction: row-reverse;
+			right: 0;
+			margin-left: auto;
+			text-align: right;
+
+			.qodef-m-nav-info {
+				margin-right: 25px;
+
+				@include qodefScreenSize680 {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	
+	.qodef-m-nav-title {
+		@include qodefHeadingStyle(h6);
+		text-transform: capitalize;
+	}
+}

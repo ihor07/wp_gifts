@@ -1,0 +1,77 @@
+.wp-color-result {
+	background-color: $admin-input-fields-background-color !important;
+	border: 1px solid $admin-input-fields-border-color;
+	border-radius: 30px;
+	box-shadow: none;
+	font-size: 11px;
+	height: 35px;
+	margin: 0 0 6px 0;
+	overflow: hidden;
+	padding: 0 0 0 30px;
+	transition: $admin-border-color-transition;
+
+	&:hover {
+		border-color: $admin-hover-color1;
+	}
+
+	.wp-color-result-text {
+		background-color: $admin-input-fields-background-color;
+		border-left: 0;
+		border-radius: 0 30px 30px 0;
+		color: $admin-heading-color;
+		font-family: $admin-heading-font;
+		font-size: #{$admin-input-fields-text-size}px;
+		padding: 0 20px 0 15px;
+	}
+
+	.color-alpha {
+		border: 0;
+		border-radius: 50% !important;
+		height: 29px !important;
+		left: 3px !important;
+		top: 2px !important;
+		width: 29px !important;
+
+		&:before {
+			border: 1px solid $admin-input-fields-border-color;
+			border-radius: 50%;
+			content: '';
+			display: block;
+			height: 29px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 29px !important;
+			z-index: 2;
+		}
+
+		&:after {
+			border: 7px solid $admin-input-fields-background-color;
+			border-radius: 50%;
+			content: '';
+			display: block;
+			display: block;
+			height: 41px;
+			left: -6px;
+			position: absolute;
+			top: -6px;
+			width: 41px;
+			z-index: 0;
+		}
+	}
+}
+
+.wp-picker-input-wrap {
+	padding: 2px 0 0 3px;
+}
+
+.wp-picker-holder {
+
+	.iris-picker-inner {
+		display: flex;
+	}
+
+	.iris-slider {
+		height: 100% !important;
+	}
+}

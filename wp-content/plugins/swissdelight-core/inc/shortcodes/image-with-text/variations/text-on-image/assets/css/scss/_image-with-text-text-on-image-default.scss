@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Icon With Text shortcode styles
+   ========================================================================== */
+
+.qodef-image-with-text {
+	&.qodef-layout--text-on-image {
+		display: flex;
+
+		.qodef-m-content {
+			@include qodefAbsoluteLayout();
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.qodef-m-image img{
+			&:nth-child(2) {
+				@include qodefAbsoluteLayout();
+				opacity: 0;
+				transition: $opacity-transition;
+			}
+		}
+
+		.qodef-m-title {
+			text-transform: capitalize;
+			margin: 0;
+			opacity: 0;
+			transform: translateY(100%);
+			transition: opacity .2s ease-out, transform .36s cubic-bezier(.33,.02,0,.93);
+		}
+
+		.qodef-m-text {
+			margin: 7px 0 0;
+			@include qodefH7Style();
+			font-size: 11px;
+			opacity: 0;
+			transform: translateY(100%);
+			transition: opacity .2s ease-out, transform .36s cubic-bezier(.33,.02,0,.93);
+		}
+
+		&:hover {
+			.qodef-m-image img:nth-child(2) {
+				opacity: 1;
+				transition: $opacity-transition;
+			}
+
+			.qodef-m-title,
+			.qodef-m-text {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
+}

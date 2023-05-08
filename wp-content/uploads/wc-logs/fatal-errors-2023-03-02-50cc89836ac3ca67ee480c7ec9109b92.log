@@ -1,0 +1,105 @@
+2023-03-02T08:41:43+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:41:50+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:41:53+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:43:51+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/sources/local.php:864
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/manager.php(443): Elementor\TemplateLibrary\Source_Local->import_template('themeforest-kws...', '/usr/home/skolq...')
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/manager.php(652): Elementor\TemplateLibrary\Manager->direct_import_template(Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-includes/class-wp-hook.php(308): Elementor\TemplateLibrary\Manager->handle_direct_actions('')
+#3 /usr/www/users/skolqs/sylagifts/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /usr/www/users/skolqs/sylagifts/wp-admin/admin-ajax.php(188): do_action('wp_ajax_element...')
+#6 {main}
+  thrown у /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/sources/local.php доступно 864
+
+2023-03-02T08:44:14+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/sources/local.php:864
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/manager.php(443): Elementor\TemplateLibrary\Source_Local->import_template('themeforest-kws...', '/usr/home/skolq...')
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/manager.php(652): Elementor\TemplateLibrary\Manager->direct_import_template(Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-includes/class-wp-hook.php(308): Elementor\TemplateLibrary\Manager->handle_direct_actions('')
+#3 /usr/www/users/skolqs/sylagifts/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /usr/www/users/skolqs/sylagifts/wp-admin/admin-ajax.php(188): do_action('wp_ajax_element...')
+#6 {main}
+  thrown у /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/sources/local.php доступно 864
+
+2023-03-02T08:47:32+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:47:56+00:00 CRITICAL Uncaught Error: Cannot use object of type WP_Error as array in /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/sources/local.php:864
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/manager.php(443): Elementor\TemplateLibrary\Source_Local->import_template('themeforest-kws...', '/usr/home/skolq...')
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/manager.php(652): Elementor\TemplateLibrary\Manager->direct_import_template(Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-includes/class-wp-hook.php(308): Elementor\TemplateLibrary\Manager->handle_direct_actions('')
+#3 /usr/www/users/skolqs/sylagifts/wp-includes/class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#5 /usr/www/users/skolqs/sylagifts/wp-admin/admin-ajax.php(188): do_action('wp_ajax_element...')
+#6 {main}
+  thrown у /usr/www/users/skolqs/sylagifts/wp-content/plugins/elementor/includes/template-library/sources/local.php доступно 864
+
+2023-03-02T08:49:48+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:49:54+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:49:59+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:50:01+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+
+2023-03-02T08:50:19+00:00 CRITICAL Uncaught Error: Call to undefined function swissdelight_render_svg_icon() in /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php:5
+Stack trace:
+#0 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(143): include()
+#1 /usr/www/users/skolqs/sylagifts/wp-content/plugins/qode-framework/helpers/helper.php(37): qode_framework_execute_template_with_params('/usr/www/users/...', Array)
+#2 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(85): qode_framework_get_template_part('/usr/www/users/...', 'plugins/woocomm...', '/usr/www/users/...', '', Array)
+#3 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/helpers/helper.php(67): swissdelight_core_get_template_part('plugins/woocomm...', 'templates/parts...', '', Array)
+#4 /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates у /usr/www/users/skolqs/sylagifts/wp-content/plugins/swissdelight-core/inc/plugins/woocommerce/widgets/dropdown-cart/templates/parts/opener.php доступно 5
+

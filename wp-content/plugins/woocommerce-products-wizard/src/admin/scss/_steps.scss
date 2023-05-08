@@ -1,0 +1,67 @@
+.wcpw-steps-list {
+    &:empty {
+        &::before {
+            content: attr(data-empty-message);
+            display: block;
+            text-align: center;
+            padding: 0.5em;
+        }
+    }
+
+    &-item {
+        &-settings {
+            &.is-loading {
+                opacity: 0.5;
+                pointer-events: none;
+                cursor: progress;
+            }
+        }
+    }
+}
+
+.wcpw-step {
+    &-settings-form {
+        &-footer {
+            position: sticky;
+            bottom: 0;
+            z-index: 5;
+            padding: 1em;
+            background: currentColor;
+            text-align: center;
+        }
+
+        .select2.select2-container {
+            width: 100% !important;
+        }
+
+        tr {
+            &:hover,
+            &:focus,
+            &:focus-within {
+                .wcpw-step-setting-apply-to-all-label {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    &-setting {
+        &-apply-to-all {
+            &-label {
+                display: block;
+                margin: 1em 0;
+                visibility: hidden;
+                font-size: 0.8em;
+                font-weight: normal;
+
+                @media (min-width: 783px) {
+                    margin: 0.5em 0 -1.5em;
+                }
+
+                &.is-active {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

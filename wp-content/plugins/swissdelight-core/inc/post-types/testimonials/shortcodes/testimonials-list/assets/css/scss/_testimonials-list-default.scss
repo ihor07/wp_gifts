@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Testimonials list shortcode styles
+   ========================================================================== */
+
+.qodef-testimonials-list {
+
+	&.qodef-swiper-container.qodef-col-num--1 {
+
+		&:before {
+			content: "''";
+			position: absolute;
+			display: block;
+			font-size: 92px;
+			line-height: 1em;
+			font-weight: 500;
+			letter-spacing: -6px;
+			left: 50%;
+			top: -15px;
+			transform: translateX(-50%);
+			font-family: $heading-font;
+			color: $heading-color;
+		}
+
+		.qodef-e-text {
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+	
+	.qodef-e-inner {
+		padding-bottom: 40px;
+		text-align: center;
+	}
+	
+	.qodef-e-media-image {
+		line-height: 0;
+		margin-bottom: 25px;
+	}
+	
+	.qodef-e-title {
+		margin: 0 0 25px;
+	}
+	
+	.qodef-e-text {
+		margin: 77px auto 45px;
+		max-width: 1000px;
+		text-transform: uppercase;
+		font-size: 38px;
+
+		&:before {
+			content: "''";
+			position: relative;
+			display: block;
+			font-size: 92px;
+			line-height: 1em;
+			letter-spacing: -6px;
+		}
+	}
+	
+	.qodef-e-author-avatar {
+		width: 58px;
+		margin-right: 15px;
+	}
+	
+	.qodef-e-author {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.qodef-e-author-name {
+		margin: 0;
+		text-transform: capitalize;
+	}
+
+	.qodef-e-author-info {
+		text-align: center;
+	}
+
+	.qodef-e-author-job {
+		margin-top: 4px;
+		display: block;
+	}
+	
+	.swiper-pagination-bullets {
+		text-align: left;
+		bottom: 0 !important;
+		
+		.swiper-pagination-bullet {
+			&:before {
+				background-color: var(--qode-main-color);
+			}
+		}
+	}
+	
+	&.qodef-skin--light {
+		.qodef-e-title,
+		.qodef-e-text,
+		.qodef-e-author {
+			color: #fff;
+		}
+		
+		.swiper-pagination-bullet {
+			&:before {
+				background-color: #fff;
+			}
+		}
+	}
+
+	~ .swiper-button-next,
+	~ .swiper-button-prev {
+
+		.page-template-page-full-width & {
+			transform: translateY(-50%);
+
+			@include qodefScreenSize1024 {
+				display: none;
+			}
+		}
+
+		svg {
+
+			line {
+				stroke-dasharray: 45;
+				stroke-dashoffset: 0;
+				transition: stroke-dashoffset .5s cubic-bezier(0.48, 0.57, 0.33, 0.89) .25s;
+
+				&:nth-child(2) {
+					transition: stroke-dashoffset .5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+				}
+			}
+		}
+
+		&:hover {
+
+			svg {
+
+				line {
+					stroke-dashoffset: -90;
+					transition: stroke-dashoffset .5s cubic-bezier(0.48, 0.57, 0.33, 0.89);
+
+					&:nth-child(2) {
+						stroke-dashoffset: 90;
+						transition: stroke-dashoffset .5s cubic-bezier(0.48, 0.57, 0.33, 0.89) .25s;
+					}
+				}
+			}
+		}
+	}
+
+	~ .swiper-button-next {
+		right: -7% !important;
+	}
+
+	~ .swiper-button-prev {
+		left: -7% !important;
+	}
+}

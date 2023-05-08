@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Header Vertical navigation style - begin
+   ========================================================================== */
+$menu-top-bottom-spacing: 10px 0 5px;
+$menu-level-two-left-spacing: 20px;
+$menu-item-top-bottom-spacing: 6px;
+
+.qodef-header--vertical {
+	
+	.qodef-header-vertical-navigation {
+		margin-top: auto;
+		margin-bottom: auto;
+		z-index: 100;
+		width: 100%;
+		
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			
+			li {
+				position: relative;
+				padding: 0;
+				margin: $menu-item-top-bottom-spacing 0;
+				
+				a {
+					position: relative;
+					display: block;
+					
+					.qodef-menu-item-arrow {
+						@include qodefMenuItemArrowStyle();
+					}
+				}
+				
+				.qodef-drop-down-second {
+					transform: translateZ(0);
+				}
+				
+				.qodef-drop-down-second-inner {
+					position: relative;
+					display: block;
+					padding: 0;
+					z-index: 997;
+				}
+				
+				&.qodef--hide-link {
+					
+					> a {
+						cursor: default;
+					}
+				}
+			}
+		}
+		
+		.qodef-menu-item-icon {
+			margin-right: 5px;
+		}
+		
+		.qodef-mega-menu-widget-holder {
+			display: none;
+		}
+		
+		> ul {
+			
+			> li {
+				
+				> a {
+					@include qodefMenuLevelOneInitialStyle();
+					
+					&:hover {
+						@include qodefMenuLevelOneHoverStyle();
+					}
+				}
+				
+				.qodef-drop-down-second-inner {
+					
+					> ul {
+						padding: $menu-top-bottom-spacing;
+					}
+					
+					ul {
+						padding-left: $menu-level-two-left-spacing;
+						
+						li {
+							
+							> a {
+								@include qodefMenuLevelTwoInitialStyle();
+								@include qodefMenuLevelTwoInitialTypographyStyle();
+							}
+							
+							&:hover,
+							&.current-menu-ancestor,
+							&.current-menu-item {
+								
+								> a {
+									@include qodefMenuLevelTwoHoverStyle();
+								}
+							}
+						}
+					}
+				}
+				
+				&.current-menu-ancestor,
+				&.current-menu-item {
+					
+					> a {
+						@include qodefMenuLevelOneHoverStyle();
+					}
+				}
+			}
+		}
+		
+		&.qodef-vertical-drop-down--below {
+			
+			ul li {
+				
+				a {
+					
+					.qodef-menu-item-arrow {
+						transform: rotate(0);
+						transition: transform .3s ease;
+					}
+				}
+				
+				.qodef-drop-down-second {
+					display: none;
+				}
+				
+				&.qodef-menu-item--open {
+					
+					> a {
+						
+						.qodef-menu-item-arrow {
+							transform: rotate(90deg);
+						}
+					}
+				}
+			}
+		}
+		
+		&.qodef-vertical-drop-down--side {
+			
+			.qodef-drop-down-second {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				
+				ul {
+					position: absolute;
+					top: -23px;
+					left: calc(100% + 40px); //because of the padding right
+					width: 254px;
+					background-color: #fff;
+					padding: 25px 20px;
+					margin-left: 50px;
+					visibility: hidden;
+					opacity: 0;
+					transition: all $transition-timing;
+					
+					&.qodef-float--open {
+						margin-left: 0;
+						opacity: 1;
+						visibility: visible;
+						z-index: 900;
+					}
+					
+					ul {
+						top: -25px; //because of the padding top
+						left: calc(100% + 20px); //because of the padding right
+						visibility: hidden;
+						transition: all .2s ease;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Header Vertical navigation style - end
+   ========================================================================== */

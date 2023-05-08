@@ -1,0 +1,47 @@
+.wcpw-settings {
+    &-table {
+        &,
+        &-row {
+            input:not([type="checkbox"]):not([type="radio"]):not([type="button"]),
+            select,
+            textarea {
+                width: 100%;
+                max-width: none;
+            }
+
+            .select2-container {
+                width: auto !important;
+                min-width: 100%;
+            }
+        }
+
+        &-row {
+            &.separate:not(:last-child) {
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+
+    &-group {
+        &-content {
+            &[aria-expanded="false"] {
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        &-toggle {
+            width: 100%;
+            margin-bottom: 1em;
+
+            &.button {
+                margin-bottom: 1em;
+            }
+        }
+    }
+}

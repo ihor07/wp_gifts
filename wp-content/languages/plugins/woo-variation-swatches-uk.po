@@ -1,0 +1,1092 @@
+# Translation of Plugins - Variation Swatches for WooCommerce - Stable (latest release) in Ukrainian
+# This file is distributed under the same license as the Plugins - Variation Swatches for WooCommerce - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-08-28 16:27:53+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.0-alpha.4\n"
+"Language: uk_UA\n"
+"Project-Id-Version: Plugins - Variation Swatches for WooCommerce - Stable (latest release)\n"
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:55
+msgid "It converts variation select box to beautiful swatches.<br><a target=\"_blank\" href=\"https://demo.getwooplugins.com/woocommerce-variation-swatches/\">Please check live demo</a>."
+msgstr "Він перетворює блок вибору модифікацій на красиві зразки. <br><a target=\"_blank\" href=\"https://demo.getwooplugins.com/woocommerce-variation-swatches/\">Будь ласка, перегляньте демоверсію</a>."
+
+#: woo-variation-swatches.php:46
+msgid "<strong>Variation Swatches for WooCommerce</strong> is an add-on of "
+msgstr "<strong>Variation Swatches for WooCommerce</strong> є доповненням до "
+
+#: woo-variation-swatches.php:37
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: includes/html-settings-tutorial.php:107
+#: includes/html-settings-tutorial.php:145
+#: includes/html-settings-tutorial.php:154
+#: includes/html-settings-tutorial.php:191
+#: includes/html-settings-tutorial.php:200
+#: includes/html-settings-tutorial.php:237
+#: includes/html-settings-tutorial.php:246
+#: includes/html-settings-tutorial.php:283
+#: includes/html-settings-tutorial.php:292
+#: includes/html-settings-tutorial.php:329
+#: includes/html-settings-tutorial.php:338
+#: includes/html-settings-tutorial.php:376
+#: includes/html-settings-tutorial.php:385
+#: includes/html-settings-tutorial.php:450
+msgid "PRO"
+msgstr "PRO"
+
+#: includes/html-settings-tutorial.php:6
+msgid "How to tutorials"
+msgstr "В якості підручників"
+
+#: includes/html-settings-sidebar.php:32
+msgid "It will help us to grow."
+msgstr "Це допоможе нам зростати."
+
+#: includes/html-settings-sidebar.php:32
+msgid "please consider giving us a 5-star rating."
+msgstr "будь ласка, подумайте про те, щоб дати нам 5-зірковий рейтинг."
+
+#: includes/html-settings-sidebar.php:31
+msgid "If you have found our plugin useful and makes you smile,"
+msgstr "Якщо ви знайшли наш плагін корисним і він викликає у вас позитивні емоції,"
+
+#: includes/html-settings-sidebar.php:29
+msgid "Thank you for choosing"
+msgstr "Дякуємо за вибір"
+
+#: includes/html-settings-sidebar.php:26
+msgid "Love Our Plugin?"
+msgstr "Подобається плагін?"
+
+#: includes/html-settings-sidebar.php:21
+msgid "For emergency case join our live chat."
+msgstr "У екстрених випадках приєднуйтесь до нашого чату."
+
+#: includes/html-settings-sidebar.php:21
+msgid "Please open a ticket"
+msgstr "Будь ласка, створіть заявку"
+
+#: includes/html-settings-sidebar.php:20
+msgid "Stuck with something?"
+msgstr "Щось застрягло?"
+
+#: includes/html-settings-sidebar.php:18
+msgid "Facing issue?"
+msgstr "Проблема?"
+
+#: includes/html-settings-sidebar.php:13
+msgid "demo"
+msgstr "демоверсію"
+
+#: includes/html-settings-sidebar.php:12
+msgid "Check Official"
+msgstr "Перегляньте нашу офіційну"
+
+#: includes/html-settings-sidebar.php:11
+msgid "documentation"
+msgstr "документації"
+
+#: includes/html-settings-sidebar.php:10
+msgid "Get started by spending some time with the"
+msgstr "Почніть, витративши деякий час на вивчення"
+
+#: includes/html-settings-group.php:14
+msgid "Show me, How it works!"
+msgstr "Покажіть мені, як це працює!"
+
+#: includes/html-settings-group.php:11
+msgid "Show your swatches individually or in groups. Split variation swatches into group to make it much more user friendly."
+msgstr "Показати свої зразки індивідуально або групами. Розділити зразки модифікацій на групи, щоб зробити їх набагато зручнішими для користувача."
+
+#: includes/html-settings-group.php:5
+msgid "Swatches Group"
+msgstr "Група зразків"
+
+#: includes/html-product-settings-panel.php:208
+msgid "Ok, I need this feature!"
+msgstr "Добре, мені потрібна ця можливість!"
+
+#: includes/html-product-settings-panel.php:204
+msgid "Automatic updates and exclusive technical support."
+msgstr "Автоматичні оновлення та ексклюзивна технічна підтримка."
+
+#: includes/html-product-settings-panel.php:201
+msgid "Customize swatches colors, background and border sizes."
+msgstr "Налаштуйте кольори зразків, фону та розмір межі."
+
+#: includes/html-product-settings-panel.php:198
+msgid "Customize font size, swatches height and width."
+msgstr "Налаштуйте розмір шрифту, висоту та ширину зразків."
+
+#: includes/html-product-settings-panel.php:195
+msgid "Customize tooltip image and image size."
+msgstr "Налаштуйте зображення підказки та розмір зображення."
+
+#: includes/html-product-settings-panel.php:192
+msgid "Customize tooltip text and background color."
+msgstr "Налаштуйте текст та колір фону підказки."
+
+#: includes/html-product-settings-panel.php:189
+msgid "Variation clear button display setting."
+msgstr "Налаштування відображення кнопки очищення попереднього вибору."
+
+#: includes/html-product-settings-panel.php:186
+msgid "Tooltip display setting on archive/shop page."
+msgstr "Налаштування відображення підказки на сторінці архіву / крамниці."
+
+#: includes/html-product-settings-panel.php:183
+msgid "Archive page swatches alignment."
+msgstr "Вирівнювання зразків сторінок архіву."
+
+#: includes/html-product-settings-panel.php:180
+msgid "Archive page swatches positioning."
+msgstr "Розміщення зразків сторінок архіву."
+
+#: includes/html-product-settings-panel.php:172
+msgid "Show Custom Image in Variation Swatches Tooltip In Product And Shop Page"
+msgstr "Показати власне зображення в підказці зразків модифікацій на сторінці товару та крамниці"
+
+#: includes/html-product-settings-panel.php:165
+msgid "Show Custom Text in Variation Tooltip In Product and Shop Page"
+msgstr "Показувати власний текст у підказці модифікацій на сторінці товару та крамниці"
+
+#: includes/html-product-settings-panel.php:157
+msgid "Make Selected Attribute Variation Swatches Size Larger Than Other Default Attribute Variations"
+msgstr "Збільшити розмір зразків модифікацій вибраних характеристик, крім інших модифікації характеристик за замовчуванням"
+
+#: includes/html-product-settings-panel.php:152
+#: includes/html-product-settings-panel.php:167
+msgid "Live Preview"
+msgstr "Попередній перегляд"
+
+#: includes/html-product-settings-panel.php:150
+msgid "Shop Page Swatches Size Control"
+msgstr "Контроль розміру зразків сторінок крамниці"
+
+#: includes/html-product-settings-panel.php:142
+msgid "Blur Or Hide Or Show Cross Sign For Out of Stock Variation Swatches (Unlimited Variations Without hiding out of stock item from catalog)"
+msgstr "Розмийте, приховайте або покажіть закресленними зразки модифікацій, яких немає в наявності (необмежена кількість модифікацій без приховування товару з каталогу, якого немає в наявності)"
+
+#: includes/html-product-settings-panel.php:134
+msgid "Option to Select ROUNDED and SQUARED Attribute Variation Swatches Shape In the Same Product."
+msgstr "Можливість вибору форми зразків модифікацій ОКРУГЛИЙ та КВАДРАТНИЙ в тому самому продукті."
+
+#: includes/html-product-settings-panel.php:126
+msgid "Generate Selected Attribute Variation Link"
+msgstr "Створити посилання на вибрану модифікацію характеристики"
+
+#: includes/html-product-settings-panel.php:118
+msgid "Change Variation Product Gallery After Selecting Single Attribute Like Amazon Or AliExpress"
+msgstr "Змініть галерею модифікацій товарів після вибору єдиної характеристики, наприклад як в Amazon або AliExpress"
+
+#: includes/html-product-settings-panel.php:110
+msgid "Show Selected Single Color or Image Or Label Attribute Swatches In Catelog/ Category / Archive / Store / Shop Pages"
+msgstr "Показати вибрані зразки модифікацій єдиного кольору, зображення або позначки на сторінках Каталог / Категорія / Архів / Склад / Крамниця"
+
+#: includes/html-product-settings-panel.php:102
+msgid "Show Entire Color, Image, Label And Radio Attributes Swatches In Catalog/ Category / Archive / Store/ Shop Pages"
+msgstr "Показати всі зразки модифікацій єдиного кольору, зображення, позначки або перемикач на сторінках Каталог / Категорія / Архів / Склад / Крамниця"
+
+#: includes/html-product-settings-panel.php:94
+msgid "Convert attribute variations into radio button."
+msgstr "Перетворити модифікації характеристик на перемикач."
+
+#: includes/html-product-settings-panel.php:86
+msgid "Group based swatches display."
+msgstr "Групове відображення зразків."
+
+#: includes/html-product-settings-panel.php:79
+msgid "Convert Manually Created Attribute Variations Into Color, Image, and Label Swatches"
+msgstr "Перетворіть створені вручну модифікації характеристик у зразки кольорові, зображень або позначок"
+
+#: includes/html-product-settings-panel.php:71
+msgid "Show Image, Color, Button Variation Swatches in Same Attribute"
+msgstr "Показати зразки модифікацій як зображення, кольорові або кнопки у тій самій характеристиці"
+
+#: includes/html-product-settings-panel.php:66
+#: includes/html-product-settings-panel.php:74
+#: includes/html-product-settings-panel.php:81
+#: includes/html-product-settings-panel.php:89
+#: includes/html-product-settings-panel.php:97
+#: includes/html-product-settings-panel.php:105
+#: includes/html-product-settings-panel.php:113
+#: includes/html-product-settings-panel.php:121
+#: includes/html-product-settings-panel.php:129
+#: includes/html-product-settings-panel.php:137
+#: includes/html-product-settings-panel.php:145
+#: includes/html-product-settings-panel.php:160
+#: includes/html-product-settings-panel.php:175
+msgid "Video Tutorial"
+msgstr "Відеоурок"
+
+#: includes/html-product-settings-panel.php:65
+#: includes/html-product-settings-panel.php:73
+#: includes/html-product-settings-panel.php:88
+#: includes/html-product-settings-panel.php:96
+#: includes/html-product-settings-panel.php:104
+#: includes/html-product-settings-panel.php:112
+#: includes/html-product-settings-panel.php:120
+#: includes/html-product-settings-panel.php:128
+#: includes/html-product-settings-panel.php:136
+#: includes/html-product-settings-panel.php:144
+#: includes/html-product-settings-panel.php:159
+#: includes/html-product-settings-panel.php:174
+msgid "Live Demo"
+msgstr "Перегляд демоверсії"
+
+#: includes/html-product-settings-panel.php:62
+msgid "Individual Product Basis Attribute Variation Swatches Customization"
+msgstr "Налаштування зразків модифікацій базових характеристик індивідуального продукту"
+
+#: includes/html-product-settings-panel.php:58
+msgid "With the premium version of <a target=\"_blank\" href=\"%s\">Variation Swatches for WooCommerce</a>, you can do:"
+msgstr "Завдяки преміум-версії <a target=\"_blank\" href=\"%s\">Variation Swatches for WooCommerce</a> ви зможете:"
+
+#: includes/getwooplugins/html/settings-page.php:98
+msgid "Reset all"
+msgstr "Скинути все"
+
+#: includes/getwooplugins/html/settings-page.php:98
+msgid "Are you sure to reset?"
+msgstr "Ви впевнені, що хочете скинути?"
+
+#: includes/getwooplugins/html/settings-page.php:97
+msgid "Save changes"
+msgstr "Зберегти зміни"
+
+#: includes/getwooplugins/html/deactive-feedback-dialog.php:54
+msgid "Skip &amp; Deactivate"
+msgstr "Пропустити та деактивувати"
+
+#: includes/getwooplugins/html/deactive-feedback-dialog.php:50
+msgid "Deactivating..."
+msgstr "Деактивація..."
+
+#: includes/getwooplugins/html/deactive-feedback-dialog.php:50
+msgid "Send feedback &amp; Deactivate"
+msgstr "Надіслати відгук та деактивувати"
+
+#: includes/getwooplugins/html/deactive-feedback-dialog.php:24
+msgid "May we have a little info about why you are deactivating?"
+msgstr "Можемо отримати трохи інформації про те, чому ви деактивуєте?"
+
+#: includes/getwooplugins/html/deactive-feedback-dialog.php:18
+#: includes/getwooplugins/html/dialog.php:20
+msgid "Close modal panel"
+msgstr "Закрити модальну панель"
+
+#: includes/getwooplugins/html/deactive-feedback-dialog.php:16
+msgid "QUICK FEEDBACK"
+msgstr "ШВИДКИЙ ВІДГУК"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:745
+msgid "Year(s)"
+msgstr "Рік(роки)"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:744
+msgid "Month(s)"
+msgstr "Місяць(і)"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:743
+msgid "Week(s)"
+msgstr "Тиждень(дні)"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:742
+msgid "Day(s)"
+msgstr "День(дні)"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:725
+msgid "Choose countries / regions&hellip;"
+msgstr "Виберіть країни / регіони&hellip;"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:699
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:725
+msgid "Country / Region"
+msgstr "Країна / Регіон"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:699
+msgid "Choose a country / region&hellip;"
+msgstr "Виберіть країну / регіон&hellip;"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:665
+msgid "Search for a page&hellip;"
+msgstr "Шукати сторінку&hellip;"
+
+#. translators: 1: page name 2: page ID
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:647
+msgid "%1$s (ID: %2$s)"
+msgstr "%1$s (ID: %2$s)"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:633
+msgid "Select a page&hellip;"
+msgstr "Виберіть сторінку&hellip;"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:219
+msgid "See how this feature works"
+msgstr "Подивіться, як працює ця функція"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:215
+msgid "Check how this feature works"
+msgstr "Перевірте, як працює ця функція"
+
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:65
+msgid "Your settings have been saved."
+msgstr "Ваші налаштування збережено."
+
+#: includes/getwooplugins/class-getwooplugins-admin-menus.php:189
+msgid "Home"
+msgstr "Головна"
+
+#: includes/getwooplugins/class-getwooplugins-admin-menus.php:160
+msgid "GetWooPlugins"
+msgstr "GetWooPlugins"
+
+#: includes/getwooplugins/class-getwooplugins-admin-menus.php:160
+#: includes/getwooplugins/class-getwooplugins-admin-menus.php:189
+msgid "GetWooPlugins Settings"
+msgstr "Налаштування"
+
+#: includes/getwooplugins/class-getwooplugins-admin-menus.php:132
+#: includes/getwooplugins/class-getwooplugins-plugin-deactivate-feedback.php:60
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr "Внесені зміни будуть втрачені, якщо ви підете з цієї сторінки."
+
+#: includes/class-woo-variation-swatches.php:225
+msgid "\"Variation Swatches for WooCommerce\" Plugin try to load \"%s\" but template \"%s\" was not found."
+msgstr "Плагін \"Variation Swatches for WooCommerce\" намагається завантажити \"%s\", але шаблон \"%s\" не знайдено."
+
+#: includes/class-woo-variation-swatches-term-meta.php:315
+msgid "Remove image"
+msgstr "Видалити зображення"
+
+#: includes/class-woo-variation-swatches-term-meta.php:312
+msgid "Upload / Add image"
+msgstr "Завантажити / Додати зображення"
+
+#: includes/class-woo-variation-swatches-settings.php:825
+msgid "Show Attribute taxonomies in large size."
+msgstr "Показати таксономії характеристик великого розміру."
+
+#: includes/class-woo-variation-swatches-settings.php:824
+msgid "Show First Attribute In Large Size"
+msgstr "Показати першу характеристику великого розміру"
+
+#: includes/class-woo-variation-swatches-settings.php:818
+msgid "Make a attribute taxonomies size large on single product"
+msgstr "Зробіть розмір таксономії характерисстики великим для єдиного товару"
+
+#: includes/class-woo-variation-swatches-settings.php:817
+msgid "Large Size Attribute Section"
+msgstr "Великий розмір розділу характеристик"
+
+#: includes/class-woo-variation-swatches-settings.php:803
+msgid "Show single attribute variation image based on first attribute select on product page."
+msgstr "Показати зображення єдиної характеристики модифікації на основі першої вибраної характеристики на сторінці товару."
+
+#: includes/class-woo-variation-swatches-settings.php:802
+msgid "Variation Image Preview"
+msgstr "Попередній перегляд зображення модифікації"
+
+#: includes/class-woo-variation-swatches-settings.php:796
+msgid "Switch variation image when single attribute selected on product page."
+msgstr "Змінити зображення модифікації, коли на сторінці товару вибрано єдину характеристику."
+
+#: includes/class-woo-variation-swatches-settings.php:795
+msgid "Single Variation Image Preview"
+msgstr "Попередній перегляд зображення єдиної модифікації"
+
+#: includes/class-woo-variation-swatches-settings.php:782
+msgid "Show Single Attribute taxonomies on archive page."
+msgstr "Показати таксономії єдиної характеристики на сторінці архіву."
+
+#: includes/class-woo-variation-swatches-settings.php:781
+msgid "Show Single Attribute"
+msgstr "Показати єдину характеристику"
+
+#: includes/class-woo-variation-swatches-settings.php:775
+msgid "Show single attribute as catalog mode on shop / archive pages. Catalog mode only change image based on selected variation."
+msgstr "Показати єдину характеристику у режимі каталогу на сторінках крамниці / архіву. Режим каталогу змінює лише зображення на основі вибраної модифікації."
+
+#: includes/class-woo-variation-swatches-settings.php:774
+msgid "Catalog mode"
+msgstr "Режим каталогу"
+
+#: includes/class-woo-variation-swatches-settings.php:753
+msgid "Show variation swatches on filter widget."
+msgstr "Показати зразки модифікацій у віджеті фільтра."
+
+#: includes/class-woo-variation-swatches-settings.php:752
+msgid "Show on filter widget"
+msgstr "Показати у віджеті фільтра"
+
+#: includes/class-woo-variation-swatches-settings.php:744
+msgid "Right"
+msgstr "Праворуч"
+
+#: includes/class-woo-variation-swatches-settings.php:743
+msgid "Center"
+msgstr "У центрі"
+
+#: includes/class-woo-variation-swatches-settings.php:742
+msgid "Left"
+msgstr "Ліворуч"
+
+#: includes/class-woo-variation-swatches-settings.php:737
+msgid "Swatches align on archive page"
+msgstr "Зразки вирівнюються на сторінці архіву"
+
+#: includes/class-woo-variation-swatches-settings.php:736
+msgid "Swatches align"
+msgstr "Вирівняти зразки"
+
+#: includes/class-woo-variation-swatches-settings.php:727
+msgid "After add to cart button"
+msgstr "Після кнопки \"Додати в кошик\""
+
+#: includes/class-woo-variation-swatches-settings.php:726
+msgid "Before add to cart button"
+msgstr "Перед кнопкою \"Додати в кошик\""
+
+#: includes/class-woo-variation-swatches-settings.php:722
+msgid "Show archive swatches position. <span style=\"color: red\">Note:</span> Some theme remove default woocommerce hooks that why it's may not work as expected. For theme compatibility <a target=\"_blank\" href=\"%s\">please open a ticket</a>."
+msgstr "Показати позицію зразків архіву. <span style=\"color: red\">Примітка:</span> Деякі теми початково видаляють позназки вибору в WooCommerce, тому вони можуть не працювати належним чином. Для сумісності теми <a target=\"_blank\" href=\"%s\">відправте, будь ласка, заявку</a>."
+
+#: includes/class-woo-variation-swatches-settings.php:721
+msgid "Display position"
+msgstr "Позиція відображення"
+
+#: includes/class-woo-variation-swatches-settings.php:712
+msgid "Show default selected attribute swatches on archive / shop page."
+msgstr "Показати початково вибрані зразки характеристик на сторінці архіву / крамниці."
+
+#: includes/class-woo-variation-swatches-settings.php:711
+msgid "Show default selected"
+msgstr "Показати початковий вибор"
+
+#: includes/class-woo-variation-swatches-settings.php:700
+msgid "Show Product availability stock info."
+msgstr "Показати товарний запас на модифікації товару."
+
+#: includes/class-woo-variation-swatches-settings.php:699
+msgid "Show Product Availability"
+msgstr "Показати товарний запас"
+
+#: includes/class-woo-variation-swatches-settings.php:691
+msgid "Enable archive page swatches preloader."
+msgstr "Увімкнути передзавантажувач зразків на сторінці архиву."
+
+#: includes/class-woo-variation-swatches-settings.php:682
+msgid "Show swatches on archive / shop page."
+msgstr "Показати зразки на сторінках крамниці / архіву."
+
+#: includes/class-woo-variation-swatches-settings.php:681
+msgid "Enable Swatches"
+msgstr "Увімкнути зразки"
+
+#: includes/class-woo-variation-swatches-settings.php:675
+msgid "Advanced change some visual styles on shop / archive page"
+msgstr "Додаткові зміни деяких візуальних стилів на сторінці крамниці / архіву"
+
+#: includes/class-woo-variation-swatches-settings.php:674
+msgid "Visual Section"
+msgstr "Візуальний розділ"
+
+#: includes/class-woo-variation-swatches-settings.php:651
+msgid "Single Product page attribute display limit. Default is 0. Means no limit."
+msgstr "Обмеження відображення характеристик сторінки продукту. Початково 0. Означає відсутність обмежень."
+
+#: includes/class-woo-variation-swatches-settings.php:650
+msgid "Attribute display limit"
+msgstr "Обмеження відображення"
+
+#: includes/class-woo-variation-swatches-settings.php:641
+msgid "Show variation product stock info."
+msgstr "Показати товарний запас на модифікації."
+
+#: includes/class-woo-variation-swatches-settings.php:640
+msgid "Variation stock info"
+msgstr "Товарний запас модифікації"
+
+#: includes/class-woo-variation-swatches-settings.php:632
+msgid "Generate sharable url based on selected variation attributes."
+msgstr "Створіть загальнодоступну URL-адресу з урахуванням вибраної характеристики модифікації."
+
+#: includes/class-woo-variation-swatches-settings.php:631
+msgid "Generate variation url"
+msgstr "Створити URL-адресу модифікації"
+
+#: includes/class-woo-variation-swatches-settings.php:623
+msgid "Enable single product page swatches preloader."
+msgstr "Увімкнути передзавантажувач зразків сторінки товару."
+
+#: includes/class-woo-variation-swatches-settings.php:622
+#: includes/class-woo-variation-swatches-settings.php:690
+msgid "Enable Preloader"
+msgstr "Увімкнути передзавантажувач"
+
+#: includes/class-woo-variation-swatches-settings.php:606
+msgid "Variation label separator. Default: %s."
+msgstr "Розділювач між назвою характеристики та її значенням. Початковий: %s."
+
+#: includes/class-woo-variation-swatches-settings.php:605
+msgid "Variation label separator"
+msgstr "Розділювач значення"
+
+#: includes/class-woo-variation-swatches-settings.php:597
+msgid "Show selected attribute variation name beside the title."
+msgstr "Показати вибране значення характеристики поруч з її назвою."
+
+#: includes/class-woo-variation-swatches-settings.php:596
+msgid "Show selected attribute"
+msgstr "Показати значення"
+
+#: includes/class-woo-variation-swatches-settings.php:590
+msgid "Settings for single product page"
+msgstr "Помістити на єдиній сторінці товару"
+
+#: includes/class-woo-variation-swatches-settings.php:589
+msgid "Single Product Page"
+msgstr "Єдина сторінка товару"
+
+#: includes/class-woo-variation-swatches-settings.php:563
+msgid "Single product variation item font size. Default is: 16"
+msgstr "Розмір шрифту зразка модифікації єдиного товару. Початковий: 16"
+
+#: includes/class-woo-variation-swatches-settings.php:562
+msgid "Font Size"
+msgstr "Розмiр шрифту"
+
+#: includes/class-woo-variation-swatches-settings.php:548
+msgid "Single product variation item height. Default is: 30"
+msgstr "Висота елемента модифікації окремого товару. Початкова: 30"
+
+#: includes/class-woo-variation-swatches-settings.php:547
+msgid "Height"
+msgstr "Висота"
+
+#: includes/class-woo-variation-swatches-settings.php:533
+msgid "Single product variation item width. Default is: 30"
+msgstr "Ширина зразка модифікації єдиного товару. Початкова: 30"
+
+#: includes/class-woo-variation-swatches-settings.php:532
+msgid "Width"
+msgstr "Ширина"
+
+#: includes/class-woo-variation-swatches-settings.php:526
+msgid "Change swatches style on product page"
+msgstr "Змініть стиль зразків на сторінці товару"
+
+#: includes/class-woo-variation-swatches-settings.php:525
+msgid "Product Page Swatches Size"
+msgstr "Розмір зразка сторінки товару"
+
+#: includes/class-woo-variation-swatches-settings.php:508
+msgid "Swatches cross color. Default is: #ff0000"
+msgstr "Колір закреслення зразка. Початковий: #ff0000"
+
+#: includes/class-woo-variation-swatches-settings.php:507
+msgid "Cross Color"
+msgstr "Kолір закреслення"
+
+#: includes/class-woo-variation-swatches-settings.php:496
+msgid "Swatches Selected tick color. Default is: #ffffff"
+msgstr "Колір позначки вибраного зразку. Початковий: #ffffff"
+
+#: includes/class-woo-variation-swatches-settings.php:495
+msgid "Tick Color"
+msgstr "Колір позначки вибору"
+
+#: includes/class-woo-variation-swatches-settings.php:489
+msgid "Change swatches indicator color"
+msgstr "Змініть колір індикатора зразків"
+
+#: includes/class-woo-variation-swatches-settings.php:488
+msgid "Swatches indicator"
+msgstr "Індикатор зразків"
+
+#: includes/class-woo-variation-swatches-settings.php:466
+msgid "Choose attribute image size. <a target=\"_blank\" href=\"%s\">Media Settings</a> or use <strong>Regenerate Thumbnails</strong> plugin."
+msgstr "Виберіть розмір зображення характеристики. <a target=\"_blank\" href=\"%s\">Медіафайли</a> або використовуйте плагін <strong>Regenerate Thumbnails</strong>."
+
+#: includes/class-woo-variation-swatches-settings.php:466
+msgid "<span style=\"color: red\">Attribute image size can be changed by <code>woo_variation_swatches_global_product_attribute_image_size</code> filter hook. So this option will not apply any effect.</span>"
+msgstr "<span style=\"color: red\">Розмір зображення позначки може змінити <code>woo_variation_swatches_global_product_attribute_image_size</code> помітка у фільтрі. Тому цей варіант не дасть жодного ефекту.</span>"
+
+#: includes/class-woo-variation-swatches-settings.php:465
+msgid "Attribute image size"
+msgstr "Розмір зображення"
+
+#: includes/class-woo-variation-swatches-settings.php:456
+msgid "Hide"
+msgstr "Прихований"
+
+#: includes/class-woo-variation-swatches-settings.php:455
+msgid "Blur without cross"
+msgstr "Розмитий без закреслення"
+
+#: includes/class-woo-variation-swatches-settings.php:454
+msgid "Blur with cross"
+msgstr "Розмитий із закресленням"
+
+#: includes/class-woo-variation-swatches-settings.php:451
+msgid "Disabled / Out Of Stock attribute will be hide / blur / crossed."
+msgstr "Вимикання зразка модифікації приховає / розмиє / закреслює його."
+
+#: includes/class-woo-variation-swatches-settings.php:450
+msgid "Disabled Attribute style"
+msgstr "Стиль вимкнутого зразка"
+
+#: includes/class-woo-variation-swatches-settings.php:441
+msgid "Clickable Out Of Stock item."
+msgstr "Відображати підказку “Немає” при наведенні на зразок модифікациї з відсутнім товаром."
+
+#: includes/class-woo-variation-swatches-settings.php:440
+msgid "Clickable Out Of Stock"
+msgstr "Підказка \"Немає\""
+
+#: includes/class-woo-variation-swatches-settings.php:431
+msgid "Disable Out Of Stock item."
+msgstr "Вимкнути відображення зразків модифікацій з відсутнім товаром."
+
+#: includes/class-woo-variation-swatches-settings.php:430
+msgid "Disable Out of Stock"
+msgstr "Вимкнути відсутні товари"
+
+#: includes/class-woo-variation-swatches-settings.php:422
+msgid "Clear selected attribute on select again."
+msgstr "Очистити вибраний зразок модифікації повторним вибором."
+
+#: includes/class-woo-variation-swatches-settings.php:421
+msgid "Clear on Reselect"
+msgstr "Очистити повторним вибором"
+
+#: includes/class-woo-variation-swatches-settings.php:414
+msgid "Advanced options"
+msgstr "Додаткові параметри"
+
+#: includes/class-woo-variation-swatches-settings.php:393
+msgid "Convert default dropdowns to image type if variation has an image."
+msgstr "Перетворити початковий випадаючий список на зображення, якщо модифікація має зображення."
+
+#: includes/class-woo-variation-swatches-settings.php:392
+msgid "Dropdowns to Image"
+msgstr "Перетворити на зображення"
+
+#: includes/class-woo-variation-swatches-settings.php:383
+msgid "Convert default dropdowns to button."
+msgstr "Перетворити початковий випадаючий список на кнопки."
+
+#: includes/class-woo-variation-swatches-settings.php:382
+msgid "Dropdowns to Button"
+msgstr "Перетворити на кнопки"
+
+#: includes/class-woo-variation-swatches-settings.php:375
+msgid "Squared Shape"
+msgstr "Квадратна форма"
+
+#: includes/class-woo-variation-swatches-settings.php:374
+msgid "Rounded Shape"
+msgstr "Округла форма"
+
+#: includes/class-woo-variation-swatches-settings.php:367
+msgid "This controls which shape style used by default."
+msgstr "Це визначає початкову форму зразка."
+
+#: includes/class-woo-variation-swatches-settings.php:365
+msgid "Shape Style"
+msgstr "Форма зразка"
+
+#: includes/class-woo-variation-swatches-settings.php:358
+msgid "Enable tooltip on each product attribute."
+msgstr "Увімкнути підказку для кожного значення характеристики товару."
+
+#: includes/class-woo-variation-swatches-settings.php:357
+msgid "Enable Tooltip"
+msgstr "Увімкнути підказку"
+
+#: includes/class-woo-variation-swatches-settings.php:350
+msgid "Enable default stylesheet."
+msgstr "Увімкнути початкову таблицю стилів."
+
+#: includes/class-woo-variation-swatches-settings.php:349
+msgid "Enable Stylesheet"
+msgstr "Увімкнути таблицю стилів"
+
+#: includes/class-woo-variation-swatches-settings.php:342
+msgid "General options"
+msgstr "Загальні параметри"
+
+#: includes/class-woo-variation-swatches-settings.php:313
+msgid "Useful Free Plugins"
+msgstr "Корисні плагіни"
+
+#: includes/class-woo-variation-swatches-settings.php:308
+msgid "Tutorial"
+msgstr "Підручник"
+
+#: includes/class-woo-variation-swatches-settings.php:305
+msgid "License"
+msgstr "Ліцензія"
+
+#: includes/class-woo-variation-swatches-settings.php:303
+#: includes/class-woo-variation-swatches-term-meta.php:103
+msgid "Group"
+msgstr "Група"
+
+#: includes/class-woo-variation-swatches-settings.php:302
+msgid "Special Attributes"
+msgstr "Спеціальні характеристики"
+
+#: includes/class-woo-variation-swatches-settings.php:301
+msgid "Archive / Shop"
+msgstr "Архів / Крамниця"
+
+#: includes/class-woo-variation-swatches-settings.php:300
+msgid "Product Page"
+msgstr "Сторінка товару"
+
+#: includes/class-woo-variation-swatches-settings.php:299
+msgid "Styling"
+msgstr "Стиль"
+
+#: includes/class-woo-variation-swatches-settings.php:298
+msgid "Advanced"
+msgstr "Додаткові"
+
+#: includes/class-woo-variation-swatches-settings.php:297
+#: includes/getwooplugins/class-getwooplugins-settings-page.php:128
+msgid "General"
+msgstr "Загальні"
+
+#: includes/class-woo-variation-swatches-settings.php:243
+msgid "Swatches Settings Reset."
+msgstr "Скидання налаштувань."
+
+#: includes/class-woo-variation-swatches-settings.php:236
+msgid "Swatches Archive Default Selected"
+msgstr "Архів вибрано початково"
+
+#: includes/class-woo-variation-swatches-settings.php:230
+msgid "Swatches On Archive Page"
+msgstr "На сторінці архіву"
+
+#: includes/class-woo-variation-swatches-settings.php:224
+msgid "Swatches License"
+msgstr "Ліцензія"
+
+#: includes/class-woo-variation-swatches-settings.php:218
+msgid "Get license"
+msgstr "Отримати ліцензію"
+
+#: includes/class-woo-variation-swatches-settings.php:211
+msgid "Swatches Generate Sharable URL"
+msgstr "Створіть загальнодоступну URL-адресу"
+
+#: includes/class-woo-variation-swatches-settings.php:205
+msgid "Swatches Disabled Attribute style"
+msgstr "Вимкнути стиль характеристики"
+
+#: includes/class-woo-variation-swatches-settings.php:187
+#: includes/class-woo-variation-swatches-settings.php:193
+#: includes/class-woo-variation-swatches-settings.php:199
+msgid "Swatches Show variation preview"
+msgstr "Показати попередній перегляд модифікації"
+
+#: includes/class-woo-variation-swatches-settings.php:181
+msgid "Swatches Show as catalog mode"
+msgstr "Показати у режимі каталогу"
+
+#: includes/class-woo-variation-swatches-settings.php:175
+msgid "Swatches Display On Widget"
+msgstr "Відображати на віджеті"
+
+#: includes/class-woo-variation-swatches-settings.php:169
+msgid "Swatches Display Position"
+msgstr "Відображати позицію"
+
+#: includes/class-woo-variation-swatches-settings.php:163
+msgid "Swatches Show Product Availability"
+msgstr "Показати характеристики товару"
+
+#: includes/class-woo-variation-swatches-settings.php:157
+msgid "Swatches Attribute Display Limit"
+msgstr "Обмеження відображення характеристик"
+
+#: includes/class-woo-variation-swatches-settings.php:151
+msgid "Swatches Show variation stock info."
+msgstr "Показати товарний запас на модифікації."
+
+#: includes/class-woo-variation-swatches-settings.php:145
+msgid "Swatches Clickable Out Of Stock"
+msgstr "Підказка \"Немає\""
+
+#: includes/class-woo-variation-swatches-settings.php:139
+msgid "Swatches Hide Out Of Stock"
+msgstr "Приховати зразки відсутніх товарів"
+
+#: includes/class-woo-variation-swatches-settings.php:133
+msgid "Swatches Clear on Reselect"
+msgstr "Очистити після повторного вибору"
+
+#: includes/class-woo-variation-swatches-settings.php:127
+msgid "Swatches Default To Image"
+msgstr "Початково для зображень"
+
+#: includes/class-woo-variation-swatches-settings.php:121
+msgid "Swatches Default To Button"
+msgstr "Початково для кнопки"
+
+#: includes/class-woo-variation-swatches-settings.php:115
+msgid "Swatches Shape Style"
+msgstr "Форма зразка"
+
+#: includes/class-woo-variation-swatches-settings.php:103
+msgid "Buy Now"
+msgstr "Придбайте зараз"
+
+#: includes/class-woo-variation-swatches-settings.php:89
+#: includes/class-woo-variation-swatches-settings.php:220
+msgid "Help &amp; Support"
+msgstr "Допомога та підтримка"
+
+#: includes/class-woo-variation-swatches-settings.php:87
+#: includes/class-woo-variation-swatches-settings.php:106
+msgid "See Documentation"
+msgstr "Дивіться документацію"
+
+#: includes/class-woo-variation-swatches-settings.php:33
+msgid "Variation Swatches for WooCommerce Settings"
+msgstr "Налаштування Variation Swatches for WooCommerce"
+
+#: includes/class-woo-variation-swatches-settings.php:25
+msgid "Variation Swatches"
+msgstr "Зразки модифікацій"
+
+#: includes/class-woo-variation-swatches-product-page.php:795
+#: includes/class-woo-variation-swatches-product-page.php:821
+msgid "Choose an option"
+msgstr "Виберіть варіант"
+
+#: includes/class-woo-variation-swatches-product-page.php:128
+msgid "%s left"
+msgstr "Залишилося %s"
+
+#: includes/class-woo-variation-swatches-product-edit-panel.php:31
+#: includes/class-woo-variation-swatches-settings.php:29
+msgid "Swatches Settings"
+msgstr "Налаштування зразків"
+
+#. translators: %s: image URL
+#: includes/class-woo-variation-swatches-export-import.php:263
+msgid "Unable to use image \"%s\"."
+msgstr "Неможливо використати зображення \"%s\"."
+
+#. translators: %s: image URL
+#: includes/class-woo-variation-swatches-export-import.php:254
+msgid "Not able to attach \"%s\"."
+msgstr "Неможливо приєднати \"%s\"."
+
+#: includes/class-woo-variation-swatches-export-import.php:132
+msgid "Swatches Attributes"
+msgstr "Зразки характеристик"
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:95
+msgid "Please share the reason"
+msgstr "Будь ласка, поділіться причиною"
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:94
+msgid "Other"
+msgstr "Інші"
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:89
+msgid "Please share with us."
+msgstr "Оцініть нас, будь ласка."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:88
+msgid "I need specific feature that you don't support."
+msgstr "Мені потрібна певна функція, яку ви не підтримуєте."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:84
+msgid "<a target=\"_blank\" href=\"https://getwooplugins.com/documentation/woocommerce-variation-swatches/\">Have you checked our documentation?</a>."
+msgstr "<a target=\"_blank\" href=\"https://getwooplugins.com/documentation/woocommerce-variation-swatches/\">Ви переглянули нашу документацію?</a>."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:82
+msgid "The plugin is <strong>too complicated to configure.</strong>"
+msgstr "Плагін <strong>занадто складний для налаштування.</strong>"
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:78
+msgid "Please provide your email address to contact with you <br>and help you to set up and configure this plugin."
+msgstr "Будь ласка, надайте свою електронну адресу, щоб зв’язатися з вами <br>і допомогти вам встановити та налаштувати цей плагін."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:76
+msgid "Your email address."
+msgstr "Ваша e-mail адреса."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:75
+msgid "I need someone to <strong>setup this plugin.</strong>"
+msgstr "Потрібен хтось, щоб <strong>налаштувати цей плагін.</strong>"
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:71
+msgid "<a target=\"_blank\" href=\"https://getwooplugins.com/tickets/\">Please open a support ticket</a>, we will fix it immediately."
+msgstr "<a target=\"_blank\" href=\"https://getwooplugins.com/tickets/\">Будь ласка, створіть заявку в службу підтримки</a>, ми негайно це виправимо."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:69
+msgid "The plugin <strong>broke my layout</strong> or some functionality."
+msgstr "Плагін <strong>порушив мій сайт</strong> або деякі функції."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:65
+msgid "Please share which plugin."
+msgstr "Будь ласка, поділіться плагіном."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:64
+msgid "I found a better plugin."
+msgstr "Я знайшов кращий плагін."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:59
+msgid "I no longer need the plugin."
+msgstr "Мені більше не потрібен плагін."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:53
+msgid "I couldn't understand how to make it work."
+msgstr "Я не зміг зрозуміти, як змусити це працювати."
+
+#: includes/class-woo-variation-swatches-deactivate-feedback.php:48
+msgid "It's a temporary deactivation."
+msgstr "Це тимчасова деактивація."
+
+#: includes/class-woo-variation-swatches-backend.php:250
+msgid "Choose a color"
+msgstr "Виберіть колір"
+
+#: includes/class-woo-variation-swatches-backend.php:201
+msgid "Mixed"
+msgstr "Змішаний"
+
+#: includes/class-woo-variation-swatches-backend.php:193
+msgid "Radio"
+msgstr "Перемикач"
+
+#: includes/class-woo-variation-swatches-backend.php:192
+msgid "Button"
+msgstr "Кнопка"
+
+#: includes/class-woo-variation-swatches-backend.php:191
+#: includes/class-woo-variation-swatches-backend.php:258
+msgid "Image"
+msgstr "Зображення"
+
+#: includes/class-woo-variation-swatches-backend.php:190
+#: includes/class-woo-variation-swatches-backend.php:249
+msgid "Color"
+msgstr "Колір"
+
+#: includes/class-woo-variation-swatches-backend.php:189
+msgid "Select"
+msgstr "Обрати"
+
+#: includes/class-woo-variation-swatches-backend.php:182
+msgid "Please save changed first."
+msgstr "Будь ласка, спочатку збережіть зміни."
+
+#: includes/class-woo-variation-swatches-backend.php:181
+msgid "Are you sure you want to reset it to default setting?"
+msgstr "Ви впевнені, що бажаєте скинути налаштування до початкових?"
+
+#: includes/class-woo-variation-swatches-backend.php:177
+msgid "Add Media"
+msgstr "Додати медіа"
+
+#: includes/class-woo-variation-swatches-backend.php:176
+msgid "Use Image"
+msgstr "Використати зображення"
+
+#: includes/class-woo-variation-swatches-backend.php:175
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: includes/class-woo-variation-swatches-backend.php:174
+msgid "Add"
+msgstr "Додати"
+
+#: includes/class-woo-variation-swatches-backend.php:173
+msgid "Add Attribute"
+msgstr "Додати характеристику"
+
+#: includes/class-woo-variation-swatches-backend.php:172
+#: includes/class-woo-variation-swatches-backend.php:259
+msgid "Choose an Image"
+msgstr "Виберіть зображення"
+
+#: includes/class-woo-variation-swatches-backend.php:134
+msgid "Add new"
+msgstr "Додати новий"
+
+#: includes/class-woo-variation-swatches-backend.php:133
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:733
+msgid "Select none"
+msgstr "Не вибирати"
+
+#: includes/class-woo-variation-swatches-backend.php:132
+#: includes/getwooplugins/class-getwooplugins-admin-settings.php:733
+msgid "Select all"
+msgstr "Обрати все"
+
+#: includes/class-woo-variation-swatches-backend.php:116
+msgid "Select terms"
+msgstr "Обрати значення"
+
+#: includes/class-woo-variation-swatches-backend.php:98
+msgid "Go Pro"
+msgstr "Перейти на Pro"
+
+#: includes/class-woo-variation-swatches-backend.php:93
+msgid "Settings"
+msgstr "Налаштування"
+
+#: includes/class-woo-variation-swatches-backend.php:93
+msgid "View Swatches settings"
+msgstr "Переглянути налаштування зразків"
+
+#: includes/class-woo-variation-swatches-backend.php:85
+msgid "Help & Support"
+msgstr "Допомога та підтримка"
+
+#: includes/class-woo-variation-swatches-backend.php:84
+msgid "Video Tutorials"
+msgstr "Відеоуроки"
+
+#: includes/class-woo-variation-swatches-backend.php:83
+#: includes/html-settings-sidebar.php:8
+msgid "Documentation"
+msgstr "Документація"
+
+#: includes/class-woo-variation-swatches-backend.php:83
+msgid "View documentation"
+msgstr "Переглянути документацію"
+
+#. Author URI of the plugin
+msgid "https://getwooplugins.com/"
+msgstr "https://getwooplugins.com/"
+
+#. Author of the plugin
+msgid "Emran Ahmed"
+msgstr "Emran Ahmed"
+
+#. Description of the plugin
+msgid "Beautiful colors, images and buttons variation swatches for woocommerce product attributes. Requires WooCommerce 5.6+"
+msgstr "Гарні кольори, зображення та кнопки зразків модифікацій для характеристик продукту WooCommerce. Потрібен WooCommerce 5.6+"
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/woo-variation-swatches/"
+msgstr "https://wordpress.org/plugins/woo-variation-swatches/"
+
+#. Plugin Name of the plugin
+#: includes/html-settings-sidebar.php:30
+msgid "Variation Swatches for WooCommerce"
+msgstr "Variation Swatches for WooCommerce"

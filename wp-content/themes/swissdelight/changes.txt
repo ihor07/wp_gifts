@@ -1,0 +1,22 @@
+1.1
+- Added WordPress 6.1.1 compatibility
+- Added WooCommerce 7.1.0 compatibility
+- Added PHP8 compatibility
+- Added Enable/Disable Google Fonts option and functionality
+- Updated Qode Framework plugin to 1.1.9
+- Updated SwissDelight Core plugin to 1.1
+- Updated SwissDelight Membership plugin to 1.0.1
+- Updated Revolution Slider to 6.6.7
+- Fixed widget area on sticky minimal header
+- Fixed deprecated _register_controls function issue
+- Fixed custom class excluding for shortcodes
+- Fixed cart widgets in WordPress 5.8
+- Improved import for PHP8
+- Improved theme registration functionality
+- Improved theme registration - code already used case
+- Improved theme registration to block Shortcodes and CPT loading if the theme is not registered
+- Theme Validation Rest Endpoint
+
+1.0.1
+- Added compatibility with Qi Addons for Elementor plugin
+

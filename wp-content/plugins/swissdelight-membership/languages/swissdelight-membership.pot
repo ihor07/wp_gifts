@@ -1,0 +1,425 @@
+# Copyright (C) 2021 Qode Interactive
+# This file is distributed under the same license as the SwissDelight Membership plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: SwissDelight Membership 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/swissdelight-membership\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-04-28T09:34:04+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.3.0\n"
+"X-Domain: swissdelight-membership\n"
+
+#. Plugin Name of the plugin
+msgid "SwissDelight Membership"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://qodeinteractive.com"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin that adds login functionality and user dashboard page"
+msgstr ""
+
+#. Author of the plugin
+msgid "Qode Interactive"
+msgstr ""
+
+#: helpers/helper.php:167
+msgid "My Account"
+msgstr ""
+
+#: helpers/helper.php:198
+msgid "SwissDelight Dashboard"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:16
+msgid "Membership"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:17
+msgid "Membership Settings"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:27
+msgid "Enable Privacy Policy Text"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:28
+msgid "Enable privacy policy text for registration modal form"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:37
+msgid "Privacy Policy Text"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:38
+msgid "Enter privacy policy text for registration modal form"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:54
+msgid "Privacy Policy Link"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:55
+msgid "Choose \"Privacy Policy Link\" page to link from registration modal form"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:72
+msgid "Privacy Policy Link Text"
+msgstr ""
+
+#: inc/general/dashboard/admin/general-options.php:73
+msgid "Enter privacy policy link text for registration modal form. Default value is \"privacy policy\""
+msgstr ""
+
+#: inc/general/helper.php:15
+msgid "Profile"
+msgstr ""
+
+#: inc/general/helper.php:21
+#: inc/general/page-templates/parts/edit-profile.php:16
+msgid "Edit Profile"
+msgstr ""
+
+#: inc/general/helper.php:27
+msgid "Log Out"
+msgstr ""
+
+#: inc/general/helper.php:137
+msgid "Options data is array with reaction and id values"
+msgstr ""
+
+#: inc/general/helper.php:171
+#: inc/login-modal/register/helper.php:61
+msgid "Password and confirm password doesn't match."
+msgstr ""
+
+#: inc/general/helper.php:178
+#: inc/login-modal/register/helper.php:45
+msgid "Please provide a valid email address."
+msgstr ""
+
+#: inc/general/helper.php:183
+msgid "An account is already registered with this email address. Please fill another one."
+msgstr ""
+
+#: inc/general/helper.php:222
+msgid "Your profile is successfully updated."
+msgstr ""
+
+#: inc/general/helper.php:224
+msgid "Change your information in order to update your profile."
+msgstr ""
+
+#: inc/general/helper.php:227
+msgid "You are unauthorized to perform this action."
+msgstr ""
+
+#: inc/general/helper.php:230
+msgid "Data are invalid."
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:20
+msgid "Update Profile"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:22
+msgid "Updating Profile"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:23
+msgid "Profile Updated"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:36
+msgid "First Name"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:44
+msgid "Last Name"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:52
+#: inc/login-modal/register/templates/register-form.php:4
+msgid "Email"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:61
+msgid "Website"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:70
+msgid "Description"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:78
+#: inc/login-modal/login/templates/login-form.php:4
+#: inc/login-modal/register/templates/register-form.php:5
+msgid "Password"
+msgstr ""
+
+#: inc/general/page-templates/parts/edit-profile.php:86
+#: inc/login-modal/register/templates/register-form.php:6
+msgid "Repeat Password"
+msgstr ""
+
+#: inc/general/page-templates/parts/profile.php:9
+msgid "First Name:"
+msgstr ""
+
+#: inc/general/page-templates/parts/profile.php:15
+msgid "Last Name:"
+msgstr ""
+
+#: inc/general/page-templates/parts/profile.php:21
+msgid "Email:"
+msgstr ""
+
+#: inc/general/page-templates/parts/profile.php:27
+msgid "Website:"
+msgstr ""
+
+#: inc/general/page-templates/parts/profile.php:33
+msgid "Description:"
+msgstr ""
+
+#: inc/general/register-template.php:11
+msgid "Qode User Dashboard"
+msgstr ""
+
+#: inc/login-modal/helper.php:80
+msgid "Options data is array with all necessary parameters for login functionality."
+msgstr ""
+
+#: inc/login-modal/helper.php:87
+msgid "Secret code to check if user is submitted the form."
+msgstr ""
+
+#: inc/login-modal/helper.php:108
+msgid "HTTP method is invalid."
+msgstr ""
+
+#: inc/login-modal/helper.php:147
+msgid "Something was wrong during the %s process."
+msgstr ""
+
+#: inc/login-modal/helper.php:150
+msgid "You are not authorized."
+msgstr ""
+
+#: inc/login-modal/helper.php:178
+msgid "You are successfully logged in. Please wait..."
+msgstr ""
+
+#: inc/login-modal/helper.php:181
+msgid "User credentials are invalid."
+msgstr ""
+
+#: inc/login-modal/login/helper.php:10
+#: inc/login-modal/login/templates/login-form.php:29
+#: inc/widgets/login-opener/templates/logged-out-content.php:2
+msgid "Login"
+msgstr ""
+
+#: inc/login-modal/login/helper.php:59
+msgid "Username or password is invalid."
+msgstr ""
+
+#: inc/login-modal/login/helper.php:63
+msgid "Login successful, redirecting..."
+msgstr ""
+
+#: inc/login-modal/login/helper.php:66
+#: inc/login-modal/register/helper.php:110
+#: inc/login-modal/reset-password/helper.php:62
+msgid "Options are invalid."
+msgstr ""
+
+#: inc/login-modal/login/templates/login-form.php:3
+#: inc/login-modal/register/templates/register-form.php:3
+msgid "Username"
+msgstr ""
+
+#: inc/login-modal/login/templates/login-form.php:9
+msgid "Remember me"
+msgstr ""
+
+#: inc/login-modal/login/templates/login-form.php:19
+msgid "Lost Your password?"
+msgstr ""
+
+#: inc/login-modal/register/helper.php:10
+#: inc/login-modal/register/templates/register-form.php:39
+msgid "Register"
+msgstr ""
+
+#: inc/login-modal/register/helper.php:49
+msgid "An account is already registered with your email address. Please log in."
+msgstr ""
+
+#: inc/login-modal/register/helper.php:53
+msgid "Please enter a valid account username."
+msgstr ""
+
+#: inc/login-modal/register/helper.php:57
+msgid "Username already exists. Please choose another one."
+msgstr ""
+
+#: inc/login-modal/register/helper.php:68
+msgid "User with this details can't be created."
+msgstr ""
+
+#: inc/login-modal/register/helper.php:91
+msgid "User Registration"
+msgstr ""
+
+#: inc/login-modal/register/helper.php:92
+msgid "You have registered successfully on "
+msgstr ""
+
+#: inc/login-modal/register/helper.php:104
+msgid "You have registered successfully, please login with the created credentials."
+msgstr ""
+
+#: inc/login-modal/register/templates/register-form.php:17
+msgid "Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our %s."
+msgstr ""
+
+#: inc/login-modal/register/templates/register-form.php:19
+msgid "privacy policy"
+msgstr ""
+
+#: inc/login-modal/reset-password/helper.php:10
+#: inc/login-modal/reset-password/templates/reset-password-form.php:13
+msgid "Reset Password"
+msgstr ""
+
+#: inc/login-modal/reset-password/helper.php:42
+#: inc/login-modal/reset-password/helper.php:59
+msgid "Please provide a valid user."
+msgstr ""
+
+#: inc/login-modal/reset-password/helper.php:57
+msgid "You have successfully reset a password, please check your email."
+msgstr ""
+
+#: inc/login-modal/reset-password/templates/reset-password-form.php:3
+msgid "Lost your password? Please enter your username or email address. You will receive a link to create a new password via email."
+msgstr ""
+
+#: inc/login-modal/reset-password/templates/reset-password-form.php:4
+msgid "Username or email"
+msgstr ""
+
+#: inc/login-modal/social-login/dashboard/admin/social-login-options.php:16
+msgid "Social Login"
+msgstr ""
+
+#: inc/login-modal/social-login/dashboard/admin/social-login-options.php:17
+msgid "Global settings related to social login"
+msgstr ""
+
+#: inc/login-modal/social-login/dashboard/admin/social-login-options.php:26
+msgid "Enable Social Login"
+msgstr ""
+
+#: inc/login-modal/social-login/dashboard/admin/social-login-options.php:27
+msgid "Enabling this option will allow login from social networks of your choice"
+msgstr ""
+
+#: inc/login-modal/social-login/dashboard/admin/social-login-options.php:35
+msgid "Social Networks"
+msgstr ""
+
+#: inc/login-modal/social-login/facebook/dashboard/admin/facebook-options.php:14
+msgid "Enable Facebook Social Login"
+msgstr ""
+
+#: inc/login-modal/social-login/facebook/dashboard/admin/facebook-options.php:15
+msgid "Enabling this option will allow login from facebook social network. SSL must be set on site in order to this functionality work"
+msgstr ""
+
+#: inc/login-modal/social-login/facebook/dashboard/admin/facebook-options.php:24
+msgid "Facebook App ID"
+msgstr ""
+
+#: inc/login-modal/social-login/facebook/dashboard/admin/facebook-options.php:25
+msgid "Copy your application ID form created Facebook Application"
+msgstr ""
+
+#: inc/login-modal/social-login/facebook/helper.php:72
+#: inc/login-modal/social-login/google/helper.php:88
+msgid "Email address is invalid."
+msgstr ""
+
+#: inc/login-modal/social-login/google/dashboard/admin/google-options.php:14
+msgid "Enable Google Social Login"
+msgstr ""
+
+#: inc/login-modal/social-login/google/dashboard/admin/google-options.php:15
+msgid "Enabling this option will allow login from google social network"
+msgstr ""
+
+#: inc/login-modal/social-login/google/dashboard/admin/google-options.php:24
+msgid "Google App ID"
+msgstr ""
+
+#: inc/login-modal/social-login/google/dashboard/admin/google-options.php:25
+msgid "Copy your Client ID form created Google Application"
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/dashboard/admin/twitter-options.php:14
+msgid "Enable Twitter Social Login"
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/dashboard/admin/twitter-options.php:15
+msgid "Enabling this option will allow login from twitter social network"
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/helper.php:39
+msgid "Please authorize your account..."
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/helper.php:44
+msgid "Twitter API instance are invalid."
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/twitter-api.php:237
+#: inc/login-modal/social-login/twitter/twitter-api.php:300
+msgid "Internal WP error"
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/twitter-api.php:251
+msgid "Redirect URL could not be generated"
+msgstr ""
+
+#: inc/login-modal/social-login/twitter/twitter-api.php:257
+msgid "Couldn't connect with Twitter API"
+msgstr ""
+
+#: inc/widgets/login-opener/login-opener.php:25
+msgid "SwissDelight Login Opener"
+msgstr ""
+
+#: inc/widgets/login-opener/login-opener.php:26
+msgid "Login and register membership widget"
+msgstr ""
+
+#: inc/widgets/login-opener/login-opener.php:31
+msgid "Opener Margin"
+msgstr ""
+
+#: inc/widgets/login-opener/login-opener.php:32
+msgid "Insert margin in format: top right bottom left"
+msgstr ""
+
+#: swissdelight-membership.php:121
+msgid "SwissDelight Core plugin is required for SwissDelight Membership plugin to work properly. Please install/activate it first."
+msgstr ""

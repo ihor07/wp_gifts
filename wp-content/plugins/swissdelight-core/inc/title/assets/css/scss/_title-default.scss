@@ -1,0 +1,72 @@
+/* ==========================================================================
+   Title styles
+   ========================================================================== */
+
+.qodef-page-title {
+	background-position: center 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	&.qodef-image--responsive {
+		height: auto !important; // because of inline style
+		
+		.qodef-m-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+			&.qodef-content-grid {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+	
+	&.qodef-alignment--center {
+		.qodef-m-content {
+			align-items: center;
+		}
+	}
+	
+	&.qodef-alignment--right {
+		.qodef-m-content {
+			align-items: flex-end;
+		}
+	}
+	
+	.qodef-m-image {
+		@include qodefRelativeLayout();
+		
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	
+	.qodef-m-content {
+		&.qodef-content-full-width {
+			padding: $full-width-side-padding;
+		}
+	}
+	
+	.qodef-breadcrumbs {
+		
+		a, span {
+			font-size: 14px;
+			color: #63605a;
+		}
+		
+		a:hover > span,
+		a:hover {
+			color: $heading-color;
+		}
+		
+		.qodef-breadcrumbs-separator {
+			margin: 0 5px;
+			
+			&:after {
+				content: '/';
+			}
+		}
+	}
+}

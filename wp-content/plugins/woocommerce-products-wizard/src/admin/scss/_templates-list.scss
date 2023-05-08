@@ -1,0 +1,53 @@
+.wcpw-templates-list {
+    &-item {
+        margin-bottom: 0;
+
+        &.is-folder & {
+            &-name {
+                &::before {
+                    background-image: url("../images/folder.svg");
+                }
+            }
+        }
+
+        &.is-file & {
+            &-name {
+                &::before {
+                    background-image: url("../images/file.svg");
+                }
+            }
+        }
+
+        &.is-in-theme {
+            > .wcpw-templates-list-item-label {
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    padding: 0.5em;
+                    background: url("../images/tick.svg") no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+
+        &-name {
+            &::before {
+                content: "";
+                display: inline-block;
+                padding: 0.5em;
+                background: no-repeat center;
+                background-size: 100%;
+            }
+        }
+
+        &-label {
+            display: inline-block;
+            margin-bottom: 0.25em;
+        }
+    }
+
+    ul {
+        margin-left: 2em;
+        margin-inline-start: 2em;
+    }
+}

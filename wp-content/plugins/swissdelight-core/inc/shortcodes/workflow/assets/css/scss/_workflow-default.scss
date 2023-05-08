@@ -1,0 +1,412 @@
+.qodef-workflow{
+	margin-top: 55px;
+	position: relative;
+
+	.main-line{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 50%;
+		margin-left: -1px;
+		border-left: 1px solid #e5e5e5;
+		height: 100%;
+
+		@include qodefScreenSize1024 {
+			left: 25px;
+			right: auto;
+			width: 1px;
+			content:none;
+			display: none;
+		}
+	}
+
+	.qodef-year{
+		position: absolute;
+		content: "";
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0;
+		font-family: $heading-font;
+		font-size: 67px;
+		font-weight: 300;
+		letter-spacing: .02em;
+		color: $heading-color;
+		z-index: 2;
+
+		&:before {
+			content: '';
+			height: 1px;
+			width: 46px;
+			background-color: $border-color;
+			position: absolute;
+			top: 50%;
+			transform: translateY(calc(-50% + 10px));
+		}
+
+		&:after {
+			content: '';
+			height: 5px;
+			width: 5px;
+			background-color: $heading-color;
+			border-radius: 100%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(calc(-50% + 10px));
+		}
+
+		@include qodefScreenSize1440(){
+			top: 40%;
+		}
+
+		@include qodefScreenSize1024(){
+			display: none;
+		}
+	}
+
+	.qodef-workflow-item{
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		padding: 0;
+
+		@include qodefScreenSize1440 {
+			padding: 0 0 9.7%;
+		}
+
+		@include qodefScreenSize1024(){
+			padding: 0 0 50px;
+		}
+
+		.qodef-workflow-image{
+			position: relative;
+		}
+
+		// first child is span - line
+
+		&:nth-child(2n) {
+
+			.qodef-workflow-image {
+				padding-right: 97px;
+
+				@include qodefScreenSize1024 {
+					padding-right: 0;
+					padding-bottom: 10px;
+				}
+			}
+
+			.qodef-workflow-text {
+				padding-left: 254px;
+
+				.qodef-year {
+					padding-left: 55px;
+					left: 0;
+
+					&:before {
+						left: 0;
+					}
+
+					&:after {
+						left: -3px;
+					}
+				}
+
+				@include qodefScreenSize1366 {
+					padding-left: 200px;
+				}
+			}
+		}
+
+		.qodef-workflow-image{
+			@include qodefScreenSize1024 {
+				padding-left: 0;
+				padding-bottom: 10px;
+			}
+		}
+
+		&:nth-child(2n+1):not(:first-child) {
+			.qodef-workflow-image {
+				padding-left: 97px;
+
+				@include qodefScreenSize1024 {
+					padding-left: 0;
+					padding-right: 0;
+					padding-bottom: 10px;
+				}
+
+				img {
+					width: 100%;
+
+					@include qodefScreenSize1024 {
+						margin-left: 0;
+					}
+				}
+			}
+			.qodef-workflow-text {
+				padding-right: 254px;
+				text-align: right;
+
+				.qodef-year{
+					padding-right: 55px;
+					right: 0;
+
+					&:before {
+						right: 0;
+					}
+
+					&:after {
+						right: -3px;
+					}
+				}
+
+				@include qodefScreenSize1366 {
+					padding-right: 200px;
+				}
+			}
+		}
+
+		&:last-child {
+		}
+
+		.qodef-workflow-item-inner{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+			position: relative;
+			width: 100%;
+			vertical-align: middle;
+			
+			@include qodefScreenSize1024 {
+				flex-direction: column-reverse;
+			}
+
+			.qodef-workflow-image,
+			.qodef-workflow-text {
+				float: left;
+				margin: auto 0;
+				width: 50%;
+				box-sizing: border-box;
+
+				@include qodefScreenSize1024 {
+					width: 100%;
+				}
+			}
+
+			.qodef-workflow-image {
+				text-align: center;
+
+				img {
+					width: 100%;
+					height: auto;
+					max-width: none;
+
+					@include qodefScreenSize1440 {
+						max-width: 100%;
+					}
+				}
+
+				.qodef-workflow-image-inner {
+					position: relative;
+
+					a {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+
+			.qodef-workflow-text {
+				position: relative;
+
+				@include qodefScreenSize1024(){
+					text-align: left !important;
+					padding: 0 0 50px 0 !important;
+
+					.qodef-m-text{
+						padding: 0 30% 0 0 !important;
+					}
+				}
+
+				@include qodefScreenSize680(){
+					.qodef-m-text{
+						padding: 0 !important;
+					}
+				}
+
+				.qodef-alignment--right{
+					+.qodef-m-text{
+						text-align: right;
+					}
+				}
+
+				.qodef-m-caption {
+					@include qodefH7Style();
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+
+				.qodef-m-title{
+					margin: 8px 0;
+
+				}
+
+				.qodef-m-text {
+					margin: 0;
+				}
+			}
+
+			&.reverse{
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: reverse;
+				-webkit-flex-direction: row-reverse;
+				-ms-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+				-webkit-flex-wrap: wrap;
+				-ms-flex-wrap: wrap;
+				flex-wrap: wrap;
+			}
+
+			&:not(.reverse){
+				@include qodefScreenSize1024(){
+					flex-direction: column;
+				}
+			}
+
+		}
+
+		.line {
+			display: inline-block;
+			background-color: #e5e5e5;
+			height: 100%;
+			left: 50%;
+			margin-left: -1px;
+			position: absolute;
+			width: 1px;
+			transform: scaleY(0);
+			transform-origin: top;
+			
+			@include qodefScreenSize1024(){
+				display: none;
+			}
+		}
+	}
+
+	&.qodef-workflow-animate {
+		opacity: 0;
+
+		.main-line {
+			opacity: 0;
+		}
+
+		.qodef-year {
+			opacity: 0;
+			transition: opacity .8s ease .8s;
+		}
+
+		.qodef-workflow-item {
+
+			.qodef-workflow-item-inner {
+
+				.qodef-workflow-image-inner img {
+					opacity: 0;
+					transform: translateX(15%);
+					transition: all 1s ease;
+				}
+
+				.qodef-workflow-label-image {
+					transform: rotate(15deg);
+					opacity: 0;
+					transition: all 1s ease .8s;
+				}
+
+				.qodef-workflow-text {
+					opacity: 0;
+					transform: translateY(15%);
+					transition: all 1s ease .6s;
+				}
+
+				&.reverse {
+
+					.qodef-workflow-image-inner img {
+						transform: translateX(-15%);
+					}
+				}
+			}
+
+			&:last-child {
+
+				&:before {
+					transition: all .32s cubic-bezier(0.13, 0.89, 0.28, 1.38) .6s;
+				}
+
+				&:after {
+					transition: all .4s cubic-bezier(0.13, 0.89, 0.28, 1.38) .4s;
+				}
+
+				&:before,
+				&:after {
+					opacity: 0;
+					transform: scale(0) translateX(-50%);
+				}
+			}
+		}
+
+		&.qodef-appeared {
+			opacity: 1;
+
+			.main-line {
+				opacity: 0;
+				height: 100%;
+			}
+
+			.qodef-workflow-item {
+
+				&.qodef-appeared {
+
+					.qodef-workflow-image-inner img {
+						opacity: 1;
+						transform: translateX(0);
+					}
+
+					.qodef-workflow-label-image {
+						transform: rotate(0);
+						opacity: 1;
+					}
+
+					.qodef-workflow-text {
+						opacity: 1;
+						transform: translateY(0);
+					}
+
+					.qodef-year {
+						opacity: 1;
+					}
+
+					.line {
+						transform: scaleY(1);
+						transition: transform 1.4s ease;
+					}
+				}
+
+				&:last-child {
+
+					&.qodef-appeared {
+
+						&:before,
+						&:after {
+							opacity: 1;
+							transform: scale(1) translateX(-50%);
+						}
+					}
+				}
+			}
+		}
+	}
+}

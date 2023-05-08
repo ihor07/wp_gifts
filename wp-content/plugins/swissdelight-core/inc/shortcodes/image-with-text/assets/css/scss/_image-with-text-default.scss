@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Image With Text shortcode styles
+   ========================================================================== */
+
+.qodef-image-with-text {
+	@include qodefRelativeLayout();
+
+	.qodef-m-image {
+		@include qodefRelativeLayout();
+		
+		a, img {
+			display: block;
+		}
+
+		img {
+			margin: auto;
+		}
+	}
+	
+	.qodef-m-content {
+		@include qodefRelativeLayout();
+	}
+	
+	.qodef-m-title {
+		margin: 31px 0 0;
+
+		a:hover {
+			color: inherit;
+		}
+
+		.qodef-landing-page & {
+			@include qodefScreenSize1024 {
+				margin-top: 26px !important;
+			}
+
+			@include qodefScreenSize680 {
+				margin-top: 21px !important;
+			}
+		}
+	}
+
+	.qodef-m-subtitle {
+		text-transform: uppercase;
+		color: $text-highlight-color;
+		font-size: 11px;
+		font-weight: 400;
+		letter-spacing: .15em;
+		display: block;
+		margin-top: 6px;
+
+	}
+	
+	.qodef-m-text {
+		margin: 9px 0 0;
+	}
+
+	&.qodef-layout--text-below {
+
+		.qodef-m-image img {
+			display: inline-block;
+		}
+	}
+
+	&.qodef-image-shadow {
+
+		.qodef-m-image img {
+			transform: translateY(0);
+			box-shadow: 4px 6px 20px 0 rgba(206, 195, 181, 0.2);
+			transition: box-shadow .36s cubic-bezier(.33,.02,0,.93), transform .6s ease;
+			will-change: transform;
+		}
+
+		&.qodef--active {
+
+			.qodef-m-image img {
+				transform: translateY(-2px);
+				box-shadow: 4px 6px 40px 0 rgba(206, 195, 181, 0.3);
+			}
+		}
+	}
+}

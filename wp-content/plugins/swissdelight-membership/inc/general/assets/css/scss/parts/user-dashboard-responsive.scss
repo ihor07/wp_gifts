@@ -1,0 +1,24 @@
+/* ==========================================================================
+   User Dashboard global responsive styles
+   ========================================================================== */
+
+#qodef-membership-user-dashboard {
+
+	@include qodefScreenSize1024 {
+		display: block;
+
+		.qodef-m-content {
+			margin-top: 40px;
+			width: 100%;
+		}
+	}
+	
+	@include qodefScreenSize680 {
+		flex-wrap: wrap;
+		
+		.qodef-m-navigation {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+}

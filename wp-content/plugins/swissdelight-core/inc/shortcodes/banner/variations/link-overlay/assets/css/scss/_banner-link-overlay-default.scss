@@ -1,0 +1,43 @@
+.qodef-banner {
+	
+	&.qodef-layout--link-overlay {
+		
+		.qodef-m-content-inner {
+			align-items: flex-start;
+			flex-direction: column;
+			justify-content: flex-end;
+			padding: 7% 11%;
+
+			@include qodefScreenSize680 {
+				padding: 20px 30px;
+			}
+
+			.qodef-m-text {
+				margin-top: 4px;
+			}
+		}
+
+		.qodef-m-image {
+			overflow: hidden;
+
+			img {
+				transform: scale(1.05) translateX(0);
+				transition: transform .4s ease-out;
+			}
+		}
+
+		&:hover {
+
+			.qodef-m-image {
+
+				img {
+					transform: scale(1.05) translateX(5px);
+				}
+			}
+
+			.qodef-m-button {
+				@include qodefButtonArrowHover();
+			}
+		}
+	}
+}

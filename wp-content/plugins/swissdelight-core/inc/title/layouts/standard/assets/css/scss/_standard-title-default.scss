@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Standard Title layout styles
+   ========================================================================== */
+
+.qodef-page-title {
+	
+	&.qodef-title--standard {
+
+		.qodef-m-title {
+			position: relative;
+			display: inline-block;
+			z-index: 10;
+		}
+
+		.qodef-m-subtitle {
+			margin: 0 0 7px;
+			font-size: 13px;
+			font-weight: 400;
+			letter-spacing: .15em;
+			text-transform: uppercase;
+			color: $text-highlight-color;
+		}
+
+		.qodef-m-cursive {
+			position: absolute;
+			left: calc(100% - 1.8em);
+			bottom: -0.4em;
+			font-family: $additional-font;
+			color: #f2e4cd;
+			text-transform: capitalize;
+			font-size: 1.26em;
+			z-index: -1;
+
+			@include qodefScreenSize680 {
+				display: none;
+			}
+		}
+	}
+}

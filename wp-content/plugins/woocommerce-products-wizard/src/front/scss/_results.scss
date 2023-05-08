@@ -1,0 +1,136 @@
+.woocommerce-products-wizard-results {
+    @include media-breakpoint-down(sm) {
+        margin-top: $spacer-md;
+    }
+
+    &-table {
+        border: $table-border-width solid $table-border-color;
+
+        &.table {
+            td,
+            th {
+                vertical-align: middle;
+            }
+        }
+
+        &-header {
+            background-color: $table-accent-bg;
+
+            &-cell {
+                &.is-value,
+                &.is-price,
+                &.is-quantity,
+                &.is-subtotal {
+                    @include media-breakpoint-up(sm) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        &-body {
+            &-row {
+                &.is-heading {
+                    text-align: center;
+                }
+            }
+
+            &-cell {
+                &.is-remove,
+                &.is-thumbnail{
+                    width: 1%;
+
+                    @include media-breakpoint-up(sm) {
+                        text-align: center;
+                    }
+                }
+
+                &.is-data {
+                    width: 50%;
+                }
+
+                &.is-price,
+                &.is-quantity,
+                &.is-subtotal {
+                    width: 10%;
+
+                    @include media-breakpoint-up(sm) {
+                        text-align: right;
+                    }
+                }
+
+                &.is-value {
+                    @include media-breakpoint-up(sm) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        &-footer {
+            background-color: $table-accent-bg;
+
+            &-cell {
+                &.is-value {
+                    @include media-breakpoint-up(sm) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    &-item {
+        &-remove {
+            float: none !important;
+
+            &-text {
+                @include visually-hidden();
+            }
+        }
+
+        &-thumbnail {
+            display: inline-block;
+            width: 68px;
+            vertical-align: middle;
+            text-align: center;
+
+            &[class] {
+                margin: 0;
+            }
+
+            img.img-thumbnail {
+                margin: 0;
+            }
+        }
+
+        &-title {
+            display: inline-block;
+        }
+
+        &-data {
+            display: block;
+
+            &:not(:empty) {
+                margin-top: $spacer-md;
+            }
+        }
+    }
+
+    &-step {
+        &-thumbnail {
+            vertical-align: middle;
+
+            &[class] {
+                display: inline-block;
+                max-width: 1.5rem;
+                height: auto;
+            }
+        }
+
+        &-name {
+            padding: 0 $spacer-sm;
+            vertical-align: middle;
+        }
+    }
+}

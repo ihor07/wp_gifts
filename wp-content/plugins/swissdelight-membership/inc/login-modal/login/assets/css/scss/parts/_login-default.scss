@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Login global styles
+   ========================================================================== */
+
+#qodef-membership-login-modal-part {
+	
+	.qodef-m-links {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.qodef-m-links-remember-me {
+		display: flex;
+		align-items: center;
+		flex-shrink: 0;
+		
+		.qodef-m-links-remember {
+			margin: 0 5px 3px 0;
+		}
+		
+		label {
+			margin-bottom: 0;
+			font-size: 14px;
+		}
+	}
+}

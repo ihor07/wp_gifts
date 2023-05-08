@@ -1,0 +1,296 @@
+/* ==========================================================================
+   User Dashboard global styles
+   ========================================================================== */
+
+#qodef-membership-user-dashboard {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+
+	@include qodefScreenSize1024 {
+		justify-content: space-between;
+	}
+	
+	.qodef-m-navigation {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+		flex-shrink: 0;
+	}
+	
+	.qodef-m-navigation-items {
+		list-style: none;
+		margin: 0;
+	}
+	
+	.qodef-m-navigation-item {
+		position: relative;
+		display: block;
+		margin: 0 0 25px;
+		
+		.qodef-e-link {
+			position: relative;
+			display: flex;
+			align-items: center;
+			@include qodefHeadingStyle('h5');
+			text-transform: unset;
+
+			&:hover {
+				color: #000;
+			}
+		}
+		
+		.qodef-e-icon {
+			flex-shrink: 0;
+			margin-right: 25px;
+			width: 15px;
+			margin-top: 1px;
+			
+			svg {
+				height: 17px;
+			}
+		}
+	}
+	
+	.qodef-m-content {
+		@include qodefRelativeLayout();
+		
+		.qodef-m-image {
+			margin-bottom: 30px;
+			
+			img {
+				display: block;
+			}
+		}
+		
+		.qodef-m-text {
+			position: relative;
+			display: flex;
+			align-items: baseline;
+
+			.qodef-m-text-value {
+				word-break: break-all;
+				
+				a:hover {
+					color: #000;
+				}
+			}
+		}
+		
+		.qodef-m-text-label {
+			flex-shrink: 0;
+			margin-right: 10px;
+			@include qodefHeadingStyle('h6');
+			text-transform: unset;
+		}
+
+		h3 {
+			text-transform: unset;
+			margin: 8px 0;
+			font-family: $text-font;
+			font-size: 15px;
+			line-height: 25px;
+			font-weight: 400;
+			color: $text-color;
+		}
+		
+		@include qodefScreenSize1024 {
+			width: auto;
+		}
+
+		@include qodefScreenSize680 {
+			width: 100%;
+		}
+
+		.qodef-front-end-submit {
+			margin-top: 18px;
+			@include qodefButtonBorderDefault();
+
+			&:hover {
+				@include qodefButtonBorderHover();
+			}
+		}
+	}
+
+	.qodef-m-content {
+
+		.qodef-image-uploader {
+			ul {
+				list-style-type: none;
+				margin-left: -10px;
+				margin-right: -10px;
+
+				li {
+					display: inline-block;
+					padding: 10px;
+				}
+			}
+		}
+
+		/*  repeater - start */
+		.qodef-repeater-wrapper {
+
+			&.qodef-presentable {
+				.qodef-repeater-add {
+					display: none;
+				}
+
+				.qodef-repeater-wrapper-main {
+					.qodef-repeater-actions-holder {
+						display: none;
+					}
+				}
+			}
+
+			.qodef-placeholder {
+				border: 1px dashed $border-color;
+				margin-bottom: 30px;
+			}
+
+			.qodef-repeater-wrapper-inner {
+				padding: 30px;
+				box-sizing: border-box;
+				background: #f7f8f9;
+			}
+
+			.qodef-repeater-wrapper-main {
+				margin-top: 10px;
+			}
+
+			.qodef-repeater-fields-holder {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				background-color: $background-color;
+				margin-bottom: 30px;
+				padding: 0 40px 0 25px;
+
+				.qodef-repeater-fields {
+					display: inline-flex;
+					flex-wrap: wrap;
+					width: 100%;
+					margin: 0 -10px;
+
+					.qodef-field-holder {
+						padding: 0 10px;
+					}
+
+					.qodef-field-holder:not(col-lg-12) {
+
+						.qodef-field-section {
+							align-items: center;
+						}
+					}
+				}
+
+				.qodef-repeater-actions-holder {
+					display: flex;
+					flex: 0 0 130px;
+					text-align: center;
+				}
+
+				.qodef-repeater-sort,
+				.qodef-repeater-remove {
+					width: 47px;
+					height: 47px;
+					line-height: 47px;
+					margin: 0 0 0 auto;
+					border-radius: 47px;
+					text-align: center;
+
+					a {
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						vertical-align: middle;
+					}
+
+					svg {
+						display: inline-block;
+						width: 16px;
+						height: auto;
+						fill: currentColor;
+					}
+				}
+
+				.qodef-repeater-sort {
+					border: 1px solid $border-color;
+					background: $background-color;
+					color: $text-color;
+					margin-bottom: 10px;
+					cursor: grab;
+				}
+
+				.qodef-repeater-remove {
+					background: var(--qode-main-color);
+					transition: $background-color-transition;
+
+					a {
+						cursor: pointer;
+						color: #fff;
+						box-shadow: none;
+						text-decoration: none;
+					}
+
+					&:hover {
+						background: $additional-background-color;
+					}
+				}
+			}
+
+			.qodef-repeater-add {
+				margin-top: 10px;
+				display: inline-block;
+			}
+
+			/* repeater inner styles */
+			.qodef-repeater-inner-wrapper-inner {
+				padding: 30px;
+				box-sizing: border-box;
+			}
+
+			.qodef-repeater-inner-wrapper-main {
+				margin-top: 30px;
+			}
+
+			.qodef-repeater-inner-fields-holder {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: 30px;
+				padding: 0 40px 0 25px;
+				background: #f7f8f9;
+
+				.qodef-repeater-inner-fields {
+					display: inline-block;
+					width: 100%;
+				}
+
+				.qodef-repeater-inner-add {
+					margin-top: 10px;
+					display: inline-block;
+				}
+			}
+
+			&.qodef-repeater-columns-layout {
+
+				.qodef-repeater-actions-holder {
+					flex: 0 0 70px;
+				}
+
+				.qodef-field-section {
+					flex-wrap: wrap;
+
+					> * {
+						width: 100%;
+						flex: auto;
+						padding: 0;
+					}
+				}
+			}
+		}
+		/*  repeater - end */
+	}
+}

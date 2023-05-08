@@ -1,0 +1,12 @@
+.woocommerce-products-wizard-checkout {
+    &-description {
+        .col2-set {
+            > .col-1,
+            > .col-2 {
+                flex-basis: auto;
+                max-width: none;
+                width: auto;
+            }
+        }
+    }
+}

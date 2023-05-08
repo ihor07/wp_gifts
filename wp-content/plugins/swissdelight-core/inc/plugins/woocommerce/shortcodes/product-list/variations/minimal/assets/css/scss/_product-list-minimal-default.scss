@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Product List Info Below styles
+   ========================================================================== */
+
+.qodef-woo-product-list {
+	
+	&.qodef-item-layout--minimal {
+		margin-top: 8px;
+		
+		.qodef-woo-product-inner {
+			display: flex;
+		}
+		
+		.qodef-woo-product-content {
+			width: 67%;
+			margin: 20px 0 0 23px;
+			text-align: left;
+		}
+		
+		.qodef-woo-product-image {
+			width: auto;
+		}
+		
+		.price {
+			justify-content: flex-start;
+		}
+		
+		&.qodef-item-skin--light {
+			
+			.qodef-woo-product-content {
+				
+				&:before {
+					background-color: $background-color;
+				}
+			}
+		}
+		
+		@include qodefScreenSize1440 {
+			
+			.qodef-woo-product-content {
+				margin: 0 0 0 23px;
+			}
+		}
+		
+		@include qodefScreenSize1024 {
+			
+			.qodef-woo-product-content {
+				margin: 20px 0 0 23px;
+			}
+		}
+	}
+}
