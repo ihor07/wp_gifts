@@ -42,6 +42,10 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
     ? $_COOKIE["#woocommerce-products-wizard-widget-{$arguments['id']}-expanded"]
     : $arguments['widgetIsExpanded'];
 ?>
+<div class="progress" style="margin-top: 25px; margin-bottom: 25px">
+    <div class="progress-bar" role="progressbar" id="ourCustomProgressBar"
+         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+</div>
 <section class="woocommerce-products-wizard-widget panel panel-default card<?php
     echo esc_attr(' is-position-' . $arguments['sidebarPosition']);
     echo $arguments['toggleWidgetOn'] ? esc_attr(' toggle-' . $arguments['toggleWidgetOn']) : '';
@@ -182,3 +186,21 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
     }
     ?>
 </section>
+<script>
+    jQuery(document).on('ajaxCompleted.wcpw', (e, instance, response, formData, options) => {
+        var ourCustomProgressBar = jQuery("#ourCustomProgressBar");
+        var widthLength = 0;
+        response.cart.forEach(function( index ) {
+            if(typeof index.q !== 'undefined') {
+                widthLength += index.q;
+            } else {
+                widthLength++;
+            }
+        });
+        widthLength = widthLength * 10;
+        var widthLengthPercentage = widthLength + "%";
+        ourCustomProgressBar.width(widthLengthPercentage);
+        ourCustomProgressBar.text(widthLengthPercentage);
+        ourCustomProgressBar.attr('aria-valuenow', widthLength);
+    });
+</script>
