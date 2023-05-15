@@ -46,7 +46,7 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
     <div class="progress-bar" role="progressbar" id="ourCustomProgressBar"
          aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%
     </div>
-</div>
+   </div>
 <section class="woocommerce-products-wizard-widget panel panel-default card<?php
 echo esc_attr(' is-position-' . $arguments['sidebarPosition']);
 echo $arguments['toggleWidgetOn'] ? esc_attr(' toggle-' . $arguments['toggleWidgetOn']) : '';
