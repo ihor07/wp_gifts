@@ -288,3 +288,126 @@ if ( ! class_exists( 'Swissdelight_Handler' ) ) {
 
 	Swissdelight_Handler::get_instance();
 }
+function add_custom_item_data( $cart_item_data, $product_id, $variation_id, $cart_item ) {
+    $cart_item_data['custom_data'] = 'Custom Data Value';
+    return $cart_item_data;
+}
+add_filter( 'woocommerce_add_cart_item_data', 'add_custom_item_data', 10, 3 );
+
+function display_custom_item_data( $item_data, $cart_item ) {
+    if ( isset( $cart_item['custom_data'] ) ) {
+        $item_data[] = array(
+            'key'   => 'Custom Data',
+            'value' => $cart_item['custom_data']
+        );
+    }
+    return $item_data;
+}
+add_filter( 'woocommerce_get_item_data', 'display_custom_item_data', 10, 2 );
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+  'key' => 'group_63ee81096fe01',
+  'title' => 'Button for cart of product',
+  'fields' => array(
+    array(
+      'key' => 'field_63ee810894a14',
+      'label' => 'Delivery',
+      'name' => 'delivery-info-btn',
+      'aria-label' => '',
+      'type' => 'textarea',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'maxlength' => '',
+      'rows' => '',
+      'placeholder' => '',
+      'new_lines' => '',
+    ),
+    array(
+      'key' => 'field_63ee822694a15',
+      'label' => 'Pay',
+      'name' => 'payment-info-btn',
+      'aria-label' => '',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'maxlength' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+    ),
+  ),
+  'location' => array(
+    array(
+      array(
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'product',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => true,
+  'description' => '',
+  'show_in_rest' => 0,
+));
+
+endif;
+function add_custom_content_to_mini_cart() {
+    echo '<p>Custom product</p>';
+}
+add_action( 'woocommerce_before_mini_cart_contents', 'add_custom_content_to_mini_cart' );
+// Add custom price field to product options
+function add_custom_price_field() {
+  woocommerce_wp_text_input( array(
+    'id' => '_custom_price_field',
+    'label' => __( 'Custom Price', 'woocommerce' ),
+    'desc_tip' => true,
+    'description' => __( 'Enter the custom price for this product.', 'woocommerce' ),
+    'value' => get_post_meta( get_the_ID(), '_custom_price_field', true ),
+    'type' => 'number',
+    'custom_attributes' => array(
+      'step' => 'any',
+      'min' => '0'
+    )
+  ) );
+}
+add_action( 'woocommerce_product_options_general_product_data', 'add_custom_price_field' );
+
+// Save custom price field value
+function save_custom_price_field( $post_id ) {
+  $custom_price = $_POST['_custom_price_field'];
+  if ( ! empty( $custom_price ) ) {
+    update_post_meta( $post_id, '_custom_price_field', esc_attr( $custom_price ) );
+  }
+}
+add_action( 'woocommerce_process_product_meta', 'save_custom_price_field' );
+
+// Display custom price field in Product Wizard
+function display_custom_price_field() {
+  $custom_price = get_post_meta( get_the_ID(), '_custom_price_field', true );
+  if ( ! empty( $custom_price ) ) {
+    echo '<p><strong>' . __( 'Custom Price:', 'woocommerce' ) . '</strong> ' . wc_price( $custom_price ) . '</p>';
+  }
+}
+add_action( 'woocommerce_single_product_summary', 'display_custom_price_field', 11 );

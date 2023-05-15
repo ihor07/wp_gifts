@@ -67,4 +67,4 @@ if ($arguments['hideChooseElement']) {
         ?>>
     <span class="custom-control-label d-inline-block"></span>
 </span>
-<!--spacer-->
+<spacer-->

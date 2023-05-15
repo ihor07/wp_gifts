@@ -42,25 +42,31 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
     ? $_COOKIE["#woocommerce-products-wizard-widget-{$arguments['id']}-expanded"]
     : $arguments['widgetIsExpanded'];
 ?>
+<div class="progress" style="margin-top: 25px; margin-bottom: 25px">
+    <div class="progress-bar" role="progressbar" id="ourCustomProgressBar"
+         aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%
+    </div>
+</div>
 <section class="woocommerce-products-wizard-widget panel panel-default card<?php
-    echo esc_attr(' is-position-' . $arguments['sidebarPosition']);
-    echo $arguments['toggleWidgetOn'] ? esc_attr(' toggle-' . $arguments['toggleWidgetOn']) : '';
-    ?>"
-    id="woocommerce-products-wizard-widget-<?php echo esc_attr($arguments['id']); ?>"
-    aria-label="<?php esc_html_e('Cart', 'woocommerce-products-wizard'); ?>"
-    aria-expanded="<?php echo var_export(filter_var($isExpanded, FILTER_VALIDATE_BOOLEAN), true); ?>"
-    data-component="wcpw-widget<?php echo $arguments['stickyWidget'] ? ' wcpw-sticky' : ''; ?>"
-    data-sticky-options="<?php
-    echo esc_attr(wp_json_encode([
-        'offset_top' => $arguments['stickyWidgetOffsetTop'],
-        'parent' => '[data-component=wcpw-main-row]'
-    ]));
-    ?>">
+echo esc_attr(' is-position-' . $arguments['sidebarPosition']);
+echo $arguments['toggleWidgetOn'] ? esc_attr(' toggle-' . $arguments['toggleWidgetOn']) : '';
+?>"
+         id="woocommerce-products-wizard-widget-<?php echo esc_attr($arguments['id']); ?>"
+         aria-label="<?php esc_html_e('Cart', 'woocommerce-products-wizard'); ?>"
+         aria-expanded="<?php echo var_export(filter_var($isExpanded, FILTER_VALIDATE_BOOLEAN), true); ?>"
+         data-component="wcpw-widget<?php echo $arguments['stickyWidget'] ? ' wcpw-sticky' : ''; ?>"
+         data-sticky-options="<?php
+         echo esc_attr(wp_json_encode([
+             'offset_top' => $arguments['stickyWidgetOffsetTop'],
+             'parent' => '[data-component=wcpw-main-row]'
+         ]));
+         ?>">
     <?php
     if (empty($arguments['cart']) && $arguments['showStepsInCart'] != 'all') {
         Template::html('messages/cart-is-empty', $arguments);
     } else {
         ?>
+        <p style="color: red; display: none"  id="errorMsg">Please add the pieces that fit your selected box</p>
         <ul class="woocommerce-products-wizard-widget-body">
             <?php
             if ($arguments['generateThumbnail']) {
@@ -69,7 +75,7 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
 
             foreach ($outOfStepsCart as $cartItemKey => $cartItem) {
                 if ((isset($cartItem['data'])
-                    && (!$cartItem['data'] || ($cartItem['data'] instanceof WC_Product && !$cartItem['data']->exists())))
+                        && (!$cartItem['data'] || ($cartItem['data'] instanceof WC_Product && !$cartItem['data']->exists())))
                     || (isset($cartItem['quantity']) && $cartItem['quantity'] <= 0)
                     || (isset($cartItem['value']) && empty($cartItem['value']))
                     || !isset($cartItem['step_id'])
@@ -106,7 +112,7 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
                 foreach ($arguments['cart'] as $cartItemKey => $cartItem) {
                     if (!isset($cartItem['step_id']) || $cartItem['step_id'] != $navItem['id']
                         || (isset($cartItem['data']) && (!$cartItem['data']
-                            || ($cartItem['data'] instanceof WC_Product && !$cartItem['data']->exists())))
+                                || ($cartItem['data'] instanceof WC_Product && !$cartItem['data']->exists())))
                         || (isset($cartItem['quantity']) && $cartItem['quantity'] <= 0)
                         || (isset($cartItem['value']) && empty($cartItem['value']))
                     ) {
@@ -158,7 +164,7 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
                         echo wp_kses_post($arguments['kitBasePriceString']);
                         ?></dt>
                     <dd class="woocommerce-products-wizard-widget-footer-cell is-value"><?php
-                        echo wc_price((float) $arguments['kitBasePrice']);
+                        echo wc_price((float)$arguments['kitBasePrice']);
                         ?></dd>
                 </dl>
                 <?php
@@ -182,3 +188,38 @@ $isExpanded = isset($_COOKIE["#woocommerce-products-wizard-widget-{$arguments['i
     }
     ?>
 </section>
+<script>
+    jQuery(document).on('ajaxCompleted.wcpw', (e, instance, response, formData, options) => {
+        var ourCustomProgressBar = jQuery("#ourCustomProgressBar");
+        var widthLength = 0;
+        if (response.stepId === "1") {
+            jQuery('#description').css('display', 'none');
+        }
+        if (response.stepId === "4") {
+            jQuery('#errorMsg').css('display', 'none');
+            var maxSizeBox = "";
+            if (typeof response.cart[0] !== 'undefined') {
+                if (response.cart[0].vn['attribute_pa_box-volume'].search('pcs') > -1) {
+                    maxSizeBox = response.cart[0].vn['attribute_pa_box-volume'].match(/\d+/g);
+                }
+            }
+            if (response.cart.length > 1) {
+                for (var i = 2; i < response.cart.length; i++) {
+                    if (typeof response.cart[i].q !== 'undefined') {
+                        widthLength += response.cart[i].q;
+                    } else {
+                        widthLength++;
+                    }
+                }
+            }
+            widthLength = Math.round(widthLength * 100 / maxSizeBox);
+            var widthLengthPercentage = widthLength + "%";
+            ourCustomProgressBar.width(widthLengthPercentage);
+            ourCustomProgressBar.text(widthLengthPercentage);
+            ourCustomProgressBar.attr('aria-valuenow', widthLength);
+            if (widthLength >= 101) {
+                jQuery('#errorMsg').css('display', 'block');
+            }
+        }
+    });
+</script>

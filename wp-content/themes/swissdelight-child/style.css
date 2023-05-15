@@ -1,0 +1,14 @@
+/*
+ Theme Name:   swissdelight-child
+ Theme URI:    http://example.com/my-child-theme/
+ Description:  My child theme
+ Author:       Yaroslava
+ Author URI:   http://example.com/
+ Template:     swissdelight
+ Version:      1.0.0
+**/
+
+/* Import the parent theme's stylesheet */
+@import url('../swissdelight/style.css');
+
+/* Custom styles go here */

@@ -35,7 +35,7 @@ if (empty($arguments['defaultAttributes'])) {
 if (empty($arguments['variationsArguments'])) {
     $arguments['variationsArguments'] = Product::getVariationArguments($arguments);
 }
-?>
+?> 
 <form data-component="wcpw-product-footer wcpw-product-variations"
     data-product_id="<?php echo esc_attr($product->get_id()); ?>"
     data-product_variations="<?php
@@ -50,6 +50,7 @@ if (empty($arguments['variationsArguments'])) {
     Template::html('form/item/prototype/availability', $arguments);
 
     do_action('woocommerce_before_add_to_cart_button');
+    
 
     if ($arguments['showFooterPrice'] || $arguments['showFooterChoose']) {
         $inputType = $arguments['severalProducts'] ? 'checkbox' : 'radio';

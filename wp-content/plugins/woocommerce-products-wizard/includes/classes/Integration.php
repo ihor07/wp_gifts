@@ -80,6 +80,7 @@ class Integration
         add_filter('woocommerce_get_item_data', [$this, 'epoItemDataFilter'], 10, 2);
         add_action('woocommerce_before_add_to_cart_button', [$this, 'epoBeforeAddToCartButton']);
         add_filter('woocommerce_add_cart_item_data', [$this, 'epoAddCartItemDataFilter']);
+        add_filter( 'woocommerce_add_cart_item_data', 'add_custom_item_data', 10, 3 );
         add_action('tm_epo_register_addons_scripts', [$this, 'epoRegisterAddonsScripts']);
 
         // CF7
@@ -659,6 +660,10 @@ class Integration
         return $data;
     }
 
+    function add_custom_item_data( $cart_item_data, $product_id, $variation_id ) {
+        $cart_item_data['custom_data'] = 'Custom Data Value';
+        return $cart_item_data;
+    }
     /**
      * Get cart item discounted price filter
      *

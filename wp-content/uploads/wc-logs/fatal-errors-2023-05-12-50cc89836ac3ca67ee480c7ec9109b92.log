@@ -1,0 +1,8 @@
+2023-05-12T23:46:01+00:00 CRITICAL syntax error, unexpected '<', expecting end of file у /Applications/MAMP/htdocs/test/wp-content/themes/swissdelight/woocommerce-products-wizard/form/item/prototype/footer/variable.php доступно 53
+
+2023-05-12T23:46:24+00:00 CRITICAL syntax error, unexpected '<', expecting end of file у /Applications/MAMP/htdocs/test/wp-content/themes/swissdelight/woocommerce-products-wizard/form/item/prototype/footer/variable.php доступно 53
+
+2023-05-12T23:47:38+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Applications/MAMP/htdocs/test/wp-content/themes/swissdelight/woocommerce-products-wizard/form/item/prototype/footer/variable.php on line 53
+
+2023-05-12T23:47:49+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Applications/MAMP/htdocs/test/wp-content/themes/swissdelight/woocommerce-products-wizard/form/item/prototype/footer/variable.php on line 53
+
